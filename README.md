@@ -19,14 +19,15 @@
 - Good commit messages, present tense 
 - Code review and leave comment
 - Hold each other accountable for team norms
+- Pair as needed
 
-#Tech Stack
+##Tech Stack
 - Travis CI
 - Coveralls
 - Postgres
 - AngularJS
 - Pivital Tracker (https://www.pivotaltracker.com/n/projects/1388960)
 - Materialize
-- Octokit gem https://github.com/octokit/octokit.rb
+- Octokit gem (https://github.com/octokit/octokit.rb)
 - Devise? 
 
