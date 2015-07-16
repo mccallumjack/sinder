@@ -20,7 +20,8 @@
 - Code review and leave comment
 - Hold each other accountable for team norms
 - Pair as needed
-- +1 for code review, +2 for merge
+- Features: +1 for code review, +2 for merge
+- Bugs: +1 
 
 ##Tech Stack
 - Travis CI
