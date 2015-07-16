@@ -22,6 +22,8 @@
 - Pair as needed
 - Features: +1 for code review, +2 for merge
 - Bugs: +1 
+- Grab vertical slice
+- Write tests on everything you grab
 
 ##Tech Stack
 - Rails
