@@ -24,12 +24,14 @@
 - Bugs: +1 
 
 ##Tech Stack
-- Travis CI
-- Coveralls
+- Rails
 - Postgres
 - AngularJS
-- Pivital Tracker (https://www.pivotaltracker.com/n/projects/1388960)
+- Devise? 
 - Materialize
 - Octokit gem (https://github.com/octokit/octokit.rb)
-- Devise? 
 
+- Travis CI
+- Coveralls
+
+- Pivital Tracker (https://www.pivotaltracker.com/n/projects/1388960)
