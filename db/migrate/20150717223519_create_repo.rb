@@ -1,7 +1,7 @@
 class CreateRepo < ActiveRecord::Migration
   def change
     create_table :repos do |t|
-      t.integer :id
+      t.integer :github_repo_id
       t.string :url
       t.string :name
       t.string :full_name
