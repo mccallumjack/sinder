@@ -29,11 +29,9 @@
 - Rails
 - Postgres
 - AngularJS
-- Devise? 
 - Materialize
+- Sidekiq (http://sidekiq.org/)
 - Octokit gem (https://github.com/octokit/octokit.rb)
-
 - Travis CI
 - Coveralls
-
 - Pivital Tracker (https://www.pivotaltracker.com/n/projects/1388960)
