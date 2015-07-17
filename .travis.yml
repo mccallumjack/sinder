@@ -1,6 +1,7 @@
 language: ruby
+cache: bundler
 rvm:
-  - 2.0.0
+  - "2.0.0"
 env:
   - DB=postgresql
 script:
@@ -10,5 +11,7 @@ before_script:
   - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
 bundler_args: --binstubs=./bundler_stubs
+notifications:
+email: false
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
