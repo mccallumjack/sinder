@@ -1,15 +1,14 @@
-class ReposController < ApplicationController
+module Api
 
-  respond_to :json
+  class ReposController < ApplicationController
 
-  def index
-    rend :json Repo.all
+    def index
+      render json: Repo.all
+    end
+
+    def default_serializer_options
+      { root: false }
+    end
+
   end
-
-
-  def default_serializer_options
-    { root: false }
-  end
-
-
 end
