@@ -42,7 +42,7 @@ group :development, :test do
   gem 'jasmine'
   gem 'database_cleaner'
   gem 'simplecov'
-  gem 'coveralls'
+  gem 'coveralls', require: false
   gem 'rake'
 
 
