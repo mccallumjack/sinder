@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/mccallumjack/sinder/badge.svg?branch=master&service=github)](https://coveralls.io/github/mccallumjack/sinder?branch=master)
+[![Build Status](https://travis-ci.org/mccallumjack/sinder.svg?branch=master)](https://travis-ci.org/mccallumjack/sinder)
+
+
 # sinder
 
 #Team Norms
