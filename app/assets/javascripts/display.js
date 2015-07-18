@@ -1,8 +1,11 @@
 $(function(){
 
+  // Initiate and load controller
   repoController = new RepoController
   repoController.load()
-  repoController.loadNext()
+
+  //Serve up first repo when ajax is done
+  $(document).ajaxStop(repoController.loadNext.bind(repoController))
 
 })
 
@@ -28,7 +31,6 @@ RepoList.prototype.getRepos = function(user) {
     })
 }
 
-
 // RepoList View
 
 function RepoView() {
@@ -44,27 +46,27 @@ function RepoController() {
   this.view = new RepoView()
   this.repolist = new RepoList()
 
-  // Loads the Repos From the Server
-  this.load = function(){
-    this.repolist.getRepos()
-  }
+}
+
+RepoController.prototype.load = function() {
+  this.repolist.getRepos()
 }
 
 RepoController.prototype.renderRepo = function(repo){
-  $(this.view.title).html(repo.url)
-  $(this.view.description).html(repo.url)
+  $(this.view.title).html(repo.title)
+  $(this.view.description).html(repo.description)
 }
 
 RepoController.prototype.loadNext = function(){
-  console.log(this.repolist.repos)
   var repo = this.repolist.repos.shift()
-  console.log(repo)
   this.renderRepo(repo)
 }
 
 RepoController.prototype.bindEvents = function(){
 
 }
+
+
 
 
 
