@@ -51,12 +51,14 @@ function RepoController() {
 }
 
 RepoController.prototype.renderRepo = function(repo){
-  this.view.$title.html(repo.title)
-  this.view.$description.html(repo.description)
+  $(this.view.title).html(repo.url)
+  $(this.view.description).html(repo.url)
 }
 
 RepoController.prototype.loadNext = function(){
+  console.log(this.repolist.repos)
   var repo = this.repolist.repos.shift()
+  console.log(repo)
   this.renderRepo(repo)
 }
 
