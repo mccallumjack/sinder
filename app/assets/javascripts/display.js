@@ -3,6 +3,7 @@ $(function(){
   // Initiate and load controller
   repoController = new RepoController
   repoController.load()
+  repoController.bindEvents();
 
   //Serve up first repo when ajax is done
   $(document).ajaxStop(repoController.loadNext.bind(repoController))
@@ -63,6 +64,36 @@ RepoController.prototype.loadNext = function(){
 }
 
 RepoController.prototype.bindEvents = function(){
+
+  $('#lang-nav li').on('click', 'a', function(e){
+      e.preventDefault();
+      var lang = $(this).text();
+  });
+
+  // posting the upvotes
+  $('#star').on('click', function(e){
+    e.preventDefault();
+    console.log("CLICKED STAR!")
+    var url = $(this).attr('href');
+    $.ajax({
+      url: url,
+      method: 'POST'
+    });
+
+  });
+
+  // posting the downvotes
+  $('#hide').on('click', function(e){
+    e.preventDefault();
+    var url = $(this).attr('href');
+    $.ajax({
+      url: url,
+      method: 'POST'
+    });
+  });
+
+  $('button').on('click', this.loadNext.bind(repoController))
+
 
 }
 
