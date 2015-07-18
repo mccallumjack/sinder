@@ -53,7 +53,7 @@ RepoController.prototype.load = function() {
 }
 
 RepoController.prototype.renderRepo = function(repo){
-  $(this.view.title).html(repo.title)
+  $(this.view.title).html(repo.url)
   $(this.view.description).html(repo.description)
 }
 
