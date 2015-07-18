@@ -5,6 +5,7 @@ class CreateUser < ActiveRecord::Migration
       t.string :email,            :null => false
       t.string :crypted_password
       t.string :salt
+      t.string :github_login
 
       t.timestamps
     end

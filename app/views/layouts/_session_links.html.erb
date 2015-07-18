@@ -10,7 +10,6 @@
 
     <%= link_to 'Logout', logout_path %>
   <% else %>
-    <%= link_to 'Login', login_path %> |
     <%= link_to 'Login using Github', auth_at_provider_path(provider: :github) %>
   <% end %>
 </div>

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery! do |config|
     config.authentications_class = Authentication
   end
+
   has_many :actions, class_name: "UserRepoAction"
   has_many :repos, through: :actions
 
