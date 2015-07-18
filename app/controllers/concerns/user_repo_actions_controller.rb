@@ -1,10 +1,8 @@
 class UserRepoController < ApplicationController
 
   def new
-    @user = User.find_by(:id session[:id])
-    @repo = Repo.find_by(:id session[:repo_id])
-    @status =
-    @user_repo_action = UserRepoAction.new(id: @user.id, repo_id: @repo.id, status: status  )
+    @repo = Repo.find_by(name: params[:repo_name])
+    @user_repo_action = UserRepoAction.create(user_id: session[:user_id], repo_id: @repo.id , status: params[:status])
   end
 
 
