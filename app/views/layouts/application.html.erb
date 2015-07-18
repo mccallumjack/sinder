@@ -3,14 +3,39 @@
 <head>
   <title>Sinder</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
   <%= javascript_include_tag "application" %>
 
+
 </head>
 <body>
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <div ng-controller="MenuController">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">All Languages</a></li>
+          <li><a href="#">Ruby</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Go</a></li>
+        </ul>
+      </div>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    </div>
+  </nav>
 
 <%= yield %>
 
 </body>
+
+
+
 </html>

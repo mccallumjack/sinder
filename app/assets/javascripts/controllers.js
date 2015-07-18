@@ -1,1 +1,1 @@
-angular.module('app.controllers',['RepoController'])
+angular.module('app.controllers',['RepoController', 'MenuController'])
