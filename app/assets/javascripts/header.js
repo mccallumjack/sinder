@@ -23,7 +23,7 @@ $('#left-arrow').on('click', function(e){
   e.preventDefault();
   var url = $(this).attr('href');
   $ajax({
-    url: url
+    url: url,
     method: POST
   });
 });
