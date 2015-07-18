@@ -1,5 +1,7 @@
-console.log('is this thing on?');
-
-$('#lang-nav li').on('click', 'a', function(){
-    console.log('is this thing on?');
+console.log('page load');
+$('#lang-nav li').on('click', 'a', function(e){
+    e.preventDefault();
+    var lang = $(this).text();
+    console.log(lang);
 });
+
