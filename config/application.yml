@@ -1,2 +1,11 @@
-SORCERY_GITHUB_KEY: "2e640df7f1e180d20e7d"
-SORCERY_GITHUB_SECRET: "6be16036813ab080278b706b1dd7558d92fa1d14"
+development:
+  app_id: "2e640df7f1e180d20e7d"
+  secret: "6be16036813ab080278b706b1dd7558d92fa1d14"
+
+test:
+  app_id: "2e640df7f1e180d20e7d"
+  secret: "6be16036813ab080278b706b1dd7558d92fa1d14"
+
+production:
+  app_id: "2e640df7f1e180d20e7d"
+  secret: "6be16036813ab080278b706b1dd7558d92fa1d14"

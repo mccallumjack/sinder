@@ -75,11 +75,11 @@ GEM
     execjs (2.5.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    faraday (0.9.1)
-      multipart-post (>= 1.2, < 3)
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     http-cookie (1.0.2)
@@ -183,18 +183,15 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< HEAD
-    sorcery (0.9.1)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (>= 0.8.0)
-=======
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
->>>>>>> master
+    sorcery (0.9.1)
+      bcrypt (~> 3.1)
+      oauth (~> 0.4, >= 0.4.4)
+      oauth2 (>= 0.8.0)
     spring (1.3.6)
     sprockets (3.2.0)
       rack (~> 1.0)
@@ -207,12 +204,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-<<<<<<< HEAD
-=======
     tins (1.5.4)
-    turbolinks (2.5.3)
-      coffee-rails
->>>>>>> master
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -249,11 +241,11 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-<<<<<<< HEAD
-  sorcery
-=======
   simplecov
->>>>>>> master
+  sorcery
   spring
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.3
