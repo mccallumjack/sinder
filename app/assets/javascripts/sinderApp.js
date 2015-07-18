@@ -1,1 +1,1 @@
-sinderApp = angular.module('sinderApp', ['ngResource'])
+sinderApp = angular.module('sinderApp', ['ngResource','app.controllers'])
