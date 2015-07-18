@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  let!(:user) { build(:user) }
+
+  it "User should have a github_user_id" do
+    expect(user.github_user_id).not_to be(nil)
+  end
 end
