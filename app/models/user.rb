@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  helper_method :has_linked_github?
+
   authenticates_with_sorcery! do |config|
     config.authentications_class = Authentication
   end

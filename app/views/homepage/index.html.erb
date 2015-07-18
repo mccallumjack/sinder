@@ -8,7 +8,7 @@
           <h5 class="header col s12 light white-text">We Match developers with Open Source projects</h5>
         </div>
         <div class="row center">
-          <a href="/display" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger" href="#modal1">Get Started</a>
+          <a href="#modal1" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger modal-close">Get Started</a>
         </div>
         <br><br>
 
@@ -52,3 +52,11 @@
     </div>
   </div>
 </div>
+
+<!-- This is a hidden modal -->
+
+<div id="modal1" class="modal">
+      <%= link_to 'Link your GitHub account', auth_at_provider_path(:provider => :github) %>
+</div>
+
+
