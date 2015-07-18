@@ -1,8 +1,14 @@
 class ReposController < ApplicationController
 
+  respond_to :json
+
   def index
-    @repos = Repo.all
-    render @repos
+    rend :json Repo.all
+  end
+
+
+  def default_serializer_options
+    { root: false }
   end
 
 
