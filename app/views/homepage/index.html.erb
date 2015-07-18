@@ -1,6 +1,52 @@
-<div ng-controller="RepoController">
-<h1>Hello World</h1>
-<ul ng-repeat="repo in repos">
-<li> {{ repo.url }} </li>
-</ul>
-<div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Welcome to Sinder</h1>
+        <div class="row center">
+          <h5 class="header col s12 light white-text">We Match developers with Open Source projects</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><%= image_tag 'background1.jpg' %></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons large">perm_identity</i></h2>
+            <h5 class="center">Link Your Github Account</h5>
+            <p class="light">We use your github so that you can automatically star repos from within Sinder. This also lets us filter out repos you are already following.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons large">polymer</i></h2>
+            <h5 class="center">View Open Source Projects</h5>
+            <p class="light">See Open Source projects in your selected languages. Sinder puts all the important characteristics of a repo front and center, including open issues, so that you can make an informed decision about whether the repo is right for you.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons large">thumb_up</i></h2>
+            <h5 class="center">Contribute!</h5>
+
+            <p class="light">Contribute, because thats the whole point</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
