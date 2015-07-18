@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root :to => "homepage#index"
+  get '/display' => "homepage#display"
 
   post "oauth/callback" => "oauths#callback"
   get "oauth/callback" => "oauths#callback" # for use with Github

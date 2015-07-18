@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 
-//= sinderApp
 //= require_tree .
