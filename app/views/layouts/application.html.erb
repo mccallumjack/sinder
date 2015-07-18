@@ -15,15 +15,14 @@
 
 </head>
 <body>
-   <nav class="light-blue lighten-1" role="navigation">
+   <nav class="light-blue lighten-1 {{active}}" ng-click="$event.preventDefault();" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <div ng-controller="MenuController">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">All Languages</a></li>
-          <li><a href="#">Ruby</a></li>
-          <li><a href="#">Python</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Go</a></li>
+          <li><a href="#" ng-click="active= 'All Languages'">All Languages</a></li>
+          <li><a href="#" ng-click="active= 'Ruby'">Ruby</a></li>
+          <li><a href="#" ng-click="active='Python'">Python</a></li>
+          <li><a href="#"ng-click="active='JavaScript'">JavaScript</a></li>
+          <li><a href="#" ng-click="active='Go'">Go</a></li>
         </ul>
       </div>
 
@@ -34,6 +33,11 @@
 
     </div>
   </nav>
+
+  <p ng-show="active">You chose <b>{{active}}</b></p>
+
+
+
 
 <%= yield %>
 
