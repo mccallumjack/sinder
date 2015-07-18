@@ -1,8 +1,8 @@
-(function() {
+// (function() {
 
-  var app = angular.module('MenuController', []);
+//   var app = angular.module('MenuController', []);
 
-  app.controller('MenuController',
-    function(angular.bind(self));
+//   app.controller('MenuController',
+//     function(angular.bind(self));
 
-})();
+// })();
