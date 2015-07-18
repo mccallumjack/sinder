@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
 
 
   validates :github_user_id, uniqueness: true, presence: true
+
+  def has_linked_github?
+    authentications.where(provider: 'github').present?
+  end
+
 end
