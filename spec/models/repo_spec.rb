@@ -20,8 +20,4 @@ describe Repo do
     expect(repo.contributors_count).to be_kind_of(Integer)
     expect(repo.pull_request_count).to be_kind_of(Integer)
   end
-
-  it "should have correct attributes as fixnum" do
-    expect(repo.pull_request_count.class).to eq(Fixnum)
-  end
 end
