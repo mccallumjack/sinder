@@ -41,6 +41,9 @@ group :development, :test do
   gem 'capybara'
   gem 'jasmine'
   gem 'database_cleaner'
+  gem 'simplecov'
+  gem 'coveralls', require: false
+  gem 'rake'
 
 
   # Access an IRB console on exception pages or by using <%= console %> in views
