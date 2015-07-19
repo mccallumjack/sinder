@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="sinderApp">
+<html>
 <head>
   <title>Sinder</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-
-
 </head>
 <body>
+<%= render 'layouts/header' %>
 
 <%= yield %>
-<!-- placeholders for the eventual swipe left/right buttons -->
-<div id="left-arrow">
-  <p>TEMP left arrow</p>
-</div>
-
-<div id="right-arrow">
-  <p>TEMP right arrow</p>
-</div>
-<!-- end placeholders  -->
-
-
-
 
 
 </body>
 
-  <%= javascript_include_tag "application" %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+<%= javascript_include_tag "application" %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
 
 </html>
