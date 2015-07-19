@@ -1,6 +1,5 @@
 $(function(){
 
-  console.log("RELOADING PAGE")
   // Initiate and load controller
   repoController = new RepoController
   repoController.load()
