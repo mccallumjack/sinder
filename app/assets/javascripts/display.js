@@ -74,10 +74,9 @@ RepoController.prototype.bindEvents = function(){
   $('#star').on('click', function(e){
     e.preventDefault();
     console.log("CLICKED STAR!")
-    var url = $(this).attr('href');
     $.ajax({
-      url: url,
-      method: 'POST'
+      url: '/userrepoactions',
+      method: 'POST',
     });
 
   });
@@ -88,7 +87,7 @@ RepoController.prototype.bindEvents = function(){
     console.log("clicked HIDE!")
     var url = $(this).attr('href');
     $.ajax({
-      url: url,
+      url: '/userrepoactions'
       method: 'POST'
     });
   });
