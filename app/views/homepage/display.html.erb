@@ -1,6 +1,6 @@
 <div class="container" id="repo-container">
   <div class="card large">
-    
+
     <div id="repo-header" class="center-align">
       <h2 id="repo-title">Repo Name</h2>
       <h5 id="repo-description">Description</h5>
@@ -17,3 +17,7 @@
   <button id="hide">Hide</button>
   <button id="star">Like</button>
 </div>
+
+<% if session[:access_token] %>
+  <%= session[:access_token] %>
+<% end %>
