@@ -2,7 +2,7 @@ class HomepageController < ApplicationController
   CLIENT_ID = ENV["GITHUB_KEY"]
   CLIENT_SECRET = ENV["GITHUB_SECRET"]
 
-  # use Rack::Session::Pool, :cookie_only => false
+  require 'rest-client'
 
   def index
     @client_id = CLIENT_ID
