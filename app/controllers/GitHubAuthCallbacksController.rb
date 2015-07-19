@@ -1,5 +1,5 @@
 class GitHubAuthCallbacksController < ApplicationController
-  def oauth_code
+  def github
     user_from_github_access_token
     unless session[:access_token]
       flash[:error] = 'There was an error contacting GitHub.'
@@ -15,7 +15,7 @@ private
 
   def github_access_token
     client = Octokit::Client.new
-    token_response = client.exchange_code_for_access_token code_params[:code]
+    token_response = client.exchange_code_for_token code_params[:code]
     session[:access_token] = token_response['access_token']
   end
 
