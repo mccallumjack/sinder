@@ -55,13 +55,14 @@
 
 <!-- This is a hidden modal -->
 
-<div id="modal1" class="modal">
+<a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>"><div id="modal1" class="modal">
   <div class="modal-content">
-    <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>"><%= image_tag "github.png" %></a>
+    <%= image_tag "github.png", id: "github_logo", class: "col s2" %>
   </div>
-  <p>
-    If that link doesn't work, remember to provide your own <a href="/v3/oauth/#web-application-flow">Client ID</a>!
-  </p>
-</div>
+  <div id="modal-text">
+    <h3><b>Sign in with Github!</b></h3>
+    If that link doesn't work, remember to provide your own <a href="/v3/oauth/#web-application-flow"><span>Client ID</span></a>!
+  </div>
+</div></a>
 
 
