@@ -14,9 +14,10 @@
 </div>
 
 <div id="display-buttons" class="center-align">
-  <button id="hide">Hide</button>
-  <button id="star">Like</button>
+  <%= button_to "Hide", hide_path, :id =>"hide", remote: true%>
+  <%= button_to "Like", star_path, :id =>"star", remote: true %>
 </div>
+
 
 <% if session[:access_token] %>
   <%= session[:access_token] %>
