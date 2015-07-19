@@ -34,13 +34,17 @@ RepoController.prototype.bindEvents = function(){
       that.repolist.reloadByLanguage(lang,that)
   });
 
-  // // posting the upvotes
+  // posting the upvotes
   // $('#star').on('click', function(e){
   //   e.preventDefault();
-  //   var url = $(this).attr('href');
+  //   var statusUpdate = {'repo_full_name': $('#repo-title').text()}
   //   $.ajax({
-  //     url: url,
-  //     method: 'POST'
+  //     url: '/star',
+  //     method: 'POST',
+  //     dataType: 'json',
+  //     data: statusUpdate
+
+
   //   });
 
   // });
@@ -48,12 +52,15 @@ RepoController.prototype.bindEvents = function(){
   // // posting the downvotes
   // $('#hide').on('click', function(e){
   //   e.preventDefault();
-  //   var url = $(this).attr('href');
+  //   var statusUpdate = {'repo_full_name': $('#repo-title').text()}
   //   $.ajax({
-  //     url: url,
-  //     method: 'POST'
+  //     url: '/hide',
+  //     method: 'POST',
+  //     dataType: 'json',
+  //     data: statusUpdate
   //   });
   // });
+
 
   $('button').on('click', this.loadNext.bind(repoController))
 
