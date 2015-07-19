@@ -15,7 +15,7 @@ RepoList.prototype.getRepos = function(user) {
       for(var i = 0; i<repos.length;i++){
         var repo = new Repo(repos[i])
         that.repos.push(repo)
-      }
+    }
   })
 }
 
