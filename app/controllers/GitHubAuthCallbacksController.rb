@@ -1,7 +1,7 @@
 class GitHubAuthCallbacksController < ApplicationController
   def oauth_code
-    if user_from_github_access_token
-    else
+    user_from_github_access_token
+    unless session[:access_token]
       flash[:error] = 'There was an error contacting GitHub.'
     end
     redirect_to root_path
