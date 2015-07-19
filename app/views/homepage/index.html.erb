@@ -56,7 +56,12 @@
 <!-- This is a hidden modal -->
 
 <div id="modal1" class="modal">
-      <%= link_to 'Link your GitHub account', auth_at_provider_path(:provider => :github) %>
+  <div class="modal-content">
+    <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>"><%= image_tag "github.png" %></a>
+  </div>
+  <p>
+    If that link doesn't work, remember to provide your own <a href="/v3/oauth/#web-application-flow">Client ID</a>!
+  </p>
 </div>
 
 
