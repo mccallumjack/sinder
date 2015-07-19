@@ -9,11 +9,18 @@ function Repo(json){
   }
 }
 
+Repo.prototype.renderIssues = function() { 
+  for(var i = 0; i < 3; i++) {
+    if(typeof this.issues[i] === 'undefined') { break; }
+    $("#issue-list").append(this.issues[i].getHTML())
+  }
+}
+
 Repo.prototype.getIssues = function() {
 
   var that = this
   var path = this.full_name
-  var url = "https://api.github.com/repos/" + path + "/issues"
+  var url = "https://api.github.com/repos/" + path + "/issues" + "?client_id=2e640df7f1e180d20e7d&client_secret=6be16036813ab080278b706b1dd7558d92fa1d14"
 
   var request = $.get(url, function() {})
     .done(function(data) {
@@ -23,13 +30,9 @@ Repo.prototype.getIssues = function() {
         if (issue.state != "open") { continue; }
         that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
       }
+        that.renderIssues();
     })
 }
 
-Repo.prototype.renderIssues = function() { 
-  for(var i = 0; i < 3; i++) {
-    $("#issue-list").append(this.issues[i].getHTML())
-  }
-}
 
 

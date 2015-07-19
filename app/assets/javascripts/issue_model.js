@@ -14,9 +14,9 @@ Issue.prototype.labelNames = function(){
 }
 
 Issue.prototype.getHTML = function(){
-  return ["<p>" + this.title + "</p>",
-   "<p>Created:  " + this.created + "</p>",
-   "<p>Comments: " + this.comments + "</p>",
-   "<p>Labels: " + this.labelNames() + "</p>"
+  return ["<tr><td>" + this.title + "</td>",
+   "<td>Created:  " + this.created + "</td></tr>",
+   "<tr><td>Labels: " + this.labelNames() + "</td>",
+   "<td>Comments: " + this.comments + "</td></tr></table>"
   ].join(",")
 }

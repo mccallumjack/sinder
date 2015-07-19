@@ -1,12 +1,13 @@
 $(function(){
 
+  console.log("RELOADING PAGE")
   // Initiate and load controller
   repoController = new RepoController
   repoController.load()
   repoController.bindEvents();
 
   //Serve up first repo when ajax is done
-  $(document).ajaxStop(repoController.loadNext.bind(repoController))
+  // $(document).ajaxStop(repoController.loadNext.bind(repoController))
 
 })
 

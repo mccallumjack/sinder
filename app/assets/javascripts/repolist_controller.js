@@ -15,10 +15,11 @@ RepoController.prototype.renderRepo = function(repo){
 }
 
 RepoController.prototype.loadNext = function(){
+  $("#issue-list").empty()
   var repo = this.repolist.repos.shift()
+  console.log("loading next for some reason...")
   this.renderRepo(repo);
-  // repo.getIssues();
-  // repo.renderIssues();
+  repo.getIssues()
 }
 
 RepoController.prototype.bindEvents = function(){
