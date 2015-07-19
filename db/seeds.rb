@@ -47,7 +47,7 @@ whitelist = [
   "donnemartin/data-science-ipython-notebooks"
 ]
 
-client = Octokit::Client.new(:client_id => GITHUB_KEY, :client_secret => GITHUB_SECRET)
+client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => ENV['GITHUB_SECRET'])
 
 whitelist.each do |address|
   repo = client.repo address
