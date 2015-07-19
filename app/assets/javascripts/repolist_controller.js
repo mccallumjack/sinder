@@ -12,6 +12,9 @@ RepoController.prototype.load = function() {
 RepoController.prototype.renderRepo = function(repo){
   $(this.view.title).html(repo.name)
   $(this.view.description).html(repo.description)
+  $(this.view.language).html(repo.language)
+  $(this.view.stars).html(repo.stargazers_count)
+  $(this.view.forks).html(repo.forks_count)
 }
 
 RepoController.prototype.loadNext = function(){
@@ -23,10 +26,13 @@ RepoController.prototype.loadNext = function(){
 
 RepoController.prototype.bindEvents = function(){
 
-  // $('#lang-nav li').on('click', 'a', function(e){
-  //     e.preventDefault();
-  //     var lang = $(this).text();
-  // });
+  var that = this
+
+  $('#lang-nav li').on('click', 'a', function(e){
+      e.preventDefault();
+      var lang = $(this).text().toLowerCase();
+      that.repolist.reloadByLanguage(lang,that)
+  });
 
   // // posting the upvotes
   // $('#star').on('click', function(e){

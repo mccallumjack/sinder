@@ -3,7 +3,8 @@ module Api
   class ReposController < ApplicationController
 
     def index
-      render json: Repo.all
+      repos = params[:language] ? Repo.where("language ilike '#{params[:language]}'") : Repo.all
+      render json: repos
     end
 
   end
