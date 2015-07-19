@@ -14,9 +14,11 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.description).html(repo.description)
 }
 
-RepoController.prototype.loadNext = function(e){
+RepoController.prototype.loadNext = function(){
   var repo = this.repolist.repos.shift()
-  this.renderRepo(repo)
+  this.renderRepo(repo);
+  // repo.getIssues();
+  // repo.renderIssues();
 }
 
 RepoController.prototype.bindEvents = function(){

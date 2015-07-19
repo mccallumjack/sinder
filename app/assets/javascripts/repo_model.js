@@ -10,13 +10,26 @@ function Repo(json){
 }
 
 Repo.prototype.getIssues = function() {
+
   var that = this
   var path = this.full_name
   var url = "https://api.github.com/repos/" + path + "/issues"
+
   var request = $.get(url, function() {})
     .done(function(data) {
-      that.issues = data
-      console.log(that.issues)
+      for(var i = 0; i < data.length; i++){
+        var issue = data[i]
+        // Don't add the issue if it isn't open
+        if (issue.state != "open") { continue; }
+        that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
+      }
     })
 }
+
+Repo.prototype.renderIssues = function() { 
+  for(var i = 0; i < 3; i++) {
+    $("#issue-list").append(this.issues[i].getHTML())
+  }
+}
+
 
