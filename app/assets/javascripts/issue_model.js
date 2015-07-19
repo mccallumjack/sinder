@@ -1,3 +1,5 @@
+
+
 function Issue(title,labels,created,comments){
   this.title = title;
   this.labels = labels;
@@ -14,9 +16,9 @@ Issue.prototype.labelNames = function(){
 }
 
 Issue.prototype.getHTML = function(){
-  return ["<tr><td>" + this.title + "</td>",
-   "<td>Created:  " + this.created + "</td></tr>",
-   "<tr><td>Labels: " + this.labelNames() + "</td>",
-   "<td>Comments: " + this.comments + "</td></tr></table>"
-  ].join(",")
+  return ["<table class='hoverable'><tr><td><strong>Issue:</strong> " + this.title + "</td>" +
+   "<td><span class='right'><strong>Created:</strong>  " + new Date(this.created).toDateString() + "</span></td></tr>" +
+   "<tr><td>" + this.labelNames() + "</td>" +
+   "<td><span class='right'><strong>Comments:</strong> " + this.comments + "</span></td></tr></table>"
+  ].join("")
 }
