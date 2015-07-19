@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :userrepoactions, only: [:create]
+
   root :to => "homepage#index"
   get '/display' => "homepage#display"
 
-  resources :userrepoactions, only: [:create]
 
   namespace :api, defaults: {format: :json} do
     resources :repos, only: [:index]

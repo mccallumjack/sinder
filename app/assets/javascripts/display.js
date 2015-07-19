@@ -21,7 +21,7 @@ function RepoList() {
 }
 
 RepoList.prototype.filterByLanguage = function(languages) {
-  return 
+  return
 }
 
 RepoList.prototype.getRepos = function(user) {
@@ -85,6 +85,7 @@ RepoController.prototype.bindEvents = function(){
   // posting the downvotes
   $('#hide').on('click', function(e){
     e.preventDefault();
+    console.log("clicked HIDE!")
     var url = $(this).attr('href');
     $.ajax({
       url: url,
