@@ -8,7 +8,7 @@
           <h5 class="header col s12 light white-text">We Match developers with Open Source projects</h5>
         </div>
         <div class="row center">
-          <a href="/display" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="#modal1" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger modal-close">Get Started</a>
         </div>
         <br><br>
 
@@ -52,3 +52,17 @@
     </div>
   </div>
 </div>
+
+<!-- This is a hidden modal -->
+
+<a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>"><div id="modal1" class="modal">
+  <div class="modal-content">
+    <%= image_tag "github.png", id: "github_logo", class: "col s2" %>
+  </div>
+  <div id="modal-text">
+    <h3><b>Sign in with Github!</b></h3>
+    If that link doesn't work, remember to provide your own <a href="/v3/oauth/#web-application-flow"><span>Client ID</span></a>!
+  </div>
+</div></a>
+
+

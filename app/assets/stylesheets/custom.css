@@ -1,0 +1,16 @@
+#github_logo{
+  width: 100px;
+}
+
+#modal-text{
+  display: inline-block;
+  float: right;
+  width: 70%;
+  margin-top: 5%;
+}
+
+.modal-content{
+  width: 25%;
+  display: inline-block;
+  margin-right: 0;
+}

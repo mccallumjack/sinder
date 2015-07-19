@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150717225759) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer  "github_user_id"
+    t.string   "github_access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
