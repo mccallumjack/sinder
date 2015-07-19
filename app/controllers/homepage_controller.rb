@@ -13,7 +13,7 @@ class HomepageController < ApplicationController
   end
 
   def github
-    session_code = request.env['rack.request.query_hash']['code']
+    session_code = params[:code]
     result = RestClient.post('https://github.com/login/oauth/access_token',
                           {:client_id => CLIENT_ID,
                            :client_secret => CLIENT_SECRET,
