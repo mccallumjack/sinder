@@ -7,7 +7,7 @@ skip_before_action :verify_authenticity_token
       user_repo_action = UserRepoAction.star(session[:github_access_token], params[:repo_full_name])
     end
 
-    render :nothing => true
+    head 201
 
   end
 
@@ -17,8 +17,8 @@ skip_before_action :verify_authenticity_token
       user = User.find_by(github_access_token: session[:github_access_token])
       user_repo_action = UserRepoAction.create(user_id: user.id, repo_id: repo.id, status: 0)
     end
-    
-    render :nothing => true
+
+    head 201
   end
 
 
