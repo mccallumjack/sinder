@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-/coverage/*
 
 # Ignore all logfiles and tempfiles.
 /log/*

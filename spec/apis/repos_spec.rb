@@ -6,33 +6,33 @@ describe Api::ReposController, type: :controller do
 
   describe 'GET#index' do
 
+    let!(:user) {create(:user)}
+    let!(:repo) {create(:repo)}
+
     it 'responds with a 200' do
-      get :index, format: :json
+      get :index,{},{:access_token => user.github_access_token}, format: :json
       expect(response).to be_success
     end
 
     it 'responds with a 200 when a language is specified' do
-      get :index,  {language: "ruby"}, format: :json
+      get :index,  {language: "Ruby"}, {:access_token => user.github_access_token}, format: :json
       expect(response).to be_success
     end
 
     it 'has something in the body' do
-      create(:repo)
-      get :index, format: :json
+      get :index,{},{:access_token => user.github_access_token}, format: :json
       json = JSON.parse(response.body)
       expect(json.length).to eq(1)
     end
 
     it 'has something in the body if the language is correct' do
-      create(:repo)
-      get :index, {language:"ruby"}, format: :json
+      get :index, { language:"Ruby" },{:access_token => user.github_access_token}, format: :json
       json = JSON.parse(response.body)
       expect(json.length).to eq(1)
     end
 
     it 'does not have something in the body if the language is incorrect' do
-      create(:repo)
-      get :index, {language:"javascript"}, format: :json
+      get :index, {language:"javascript"},{:access_token => user.github_access_token}, format: :json
       json = JSON.parse(response.body)
       expect(json.length).to eq(0)
     end
@@ -43,16 +43,17 @@ describe Api::ReposController, type: :controller do
 
   describe 'GET#issues' do
 
+    let!(:user) {create(:user)}
+    let!(:repo) {create(:repo)}
+
     it 'responds with a 200 when a repo is passed' do
-      create(:repo)
       id = Repo.first.id
-      get :issues, {id: id}
+      get :issues, {id: id},{:access_token => user.github_access_token}
       expect(response).to be_success
     end
 
     it 'responds with 404 when an incorrect repo is passed' do
-      create(:repo)
-      expect{get :issues, {id: 437}}.to raise_error
+      expect{get :issues, {id: 437},{:access_token => user.github_access_token}}.to raise_error
     end
 
   end
