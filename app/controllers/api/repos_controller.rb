@@ -9,7 +9,7 @@ module Api
     def index
       user = User.find_by(github_access_token: session[:access_token])
       if params[:language] && params[:language] != "all languages" 
-        repos = Repo.language_repos(user, language)
+        repos = Repo.language_repos(user, params[:language])
       else 
         repos = Repo.all_repos(user)
       end

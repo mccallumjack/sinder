@@ -52,7 +52,7 @@ end
 
 def contributing_file?(repo)
   doc = Nokogiri::HTML(open(repo.html_url))
-  doc.css(('a:contains("CONTRIBUTING")') != nil
+  doc.css('a:contains("CONTRIBUTING")').length != 0 ? true : false
 end
 
 client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => ENV['GITHUB_SECRET'])
@@ -60,6 +60,7 @@ client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => 
 whitelist.each do |address|
   repo = client.repo address
   contributors_count = get_contributor_count(repo)
+  contrib_file = contributing_file?(repo)
   # pull_request_count = client.pull_requests(address).length
   Repo.create!(
     github_repo_id: repo.id,
@@ -74,6 +75,7 @@ whitelist.each do |address|
     open_issues_count: repo.open_issues_count,
     language: repo.language,
     contributors_count: contributors_count,
+    contributors_file: contrib_file,
     # pull_request_count: pull_request_count
   )
 end
