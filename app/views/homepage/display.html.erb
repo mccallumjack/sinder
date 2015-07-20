@@ -22,8 +22,12 @@
   </div>
 </div>
 
+<div id="display-buttons" class="center-align">
+  <button id="hide">Hide (Non Logged In)</button>
+  <button id="star">Star (Non Logged In)</button>
+</div>
 
 <div id="display-buttons" class="center-align">
-  <button id="hide">Hide</button>
-  <button id="star">Star</button>
+  <%= button_to "Hide", hide_path, :id =>"hide", remote: true%>
+  <%= button_to "Like", star_path, :id =>"star", remote: true %>
 </div>

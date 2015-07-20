@@ -24,6 +24,7 @@ gem "figaro"
 gem 'active_model_serializers'
 
 gem 'octokit', '~> 3.0'
+gem 'rest-client', '~> 1.8.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
