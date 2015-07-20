@@ -24,8 +24,7 @@ describe Api::ReposController, type: :controller do
 
     it 'responds with a 200 when a repo is passed' do
       create(:repo)
-      repo = Repo.first
-      id = repo.id
+      id = Repo.first.id
       get :issues, {id: id}
       expect(response).to be_success
     end
