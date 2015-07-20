@@ -24,7 +24,7 @@ class HomepageController < ApplicationController
     puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
     puts result
     puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-
+    puts code_params
     # session[:access_token] = JSON.parse(result)['access_token']
     # User.where(github_access_token: session[:access_token]).first_or_initialize
     redirect_to display_path
