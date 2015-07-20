@@ -54,8 +54,8 @@ client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => 
 
 whitelist.each do |address|
   repo = client.repo address
-  # contributors_count = client.contributors_stats(address).length
-  pull_request_count = client.pull_requests(address).length
+  contributors_count = client.get_contributor_count(repo)
+  # pull_request_count = client.pull_requests(address).length
   Repo.create!(
     github_repo_id: repo.id,
     url: repo.url,
@@ -68,7 +68,7 @@ whitelist.each do |address|
     forks_count: repo.forks_count,
     open_issues_count: repo.open_issues_count,
     language: repo.language,
-    # contributors_count: contributors_count,
-    pull_request_count: pull_request_count
+    contributors_count: contributors_count,
+    # pull_request_count: pull_request_count
   )
 end
