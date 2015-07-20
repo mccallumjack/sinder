@@ -44,11 +44,9 @@ RepoController.prototype.bindEvents = function(){
       method: 'POST',
       dataType: 'json',
       data: statusUpdate
-
-
     });
-
   });
+
 
   // posting the downvotes
   $('#hide').on('click', function(e){
@@ -64,7 +62,6 @@ RepoController.prototype.bindEvents = function(){
 
 
   $('#display-buttons').on('click', this.loadNext.bind(repoController))
-
 
 }
 

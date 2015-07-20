@@ -14,9 +14,7 @@ Issue.prototype.labelNames = function(){
 }
 
 Issue.prototype.getHTML = function(){
-  return ["<table class='hoverable'><tr><td><strong>Issue:</strong> " + this.title + "</td>" +
-   "<td><span class='right'><strong>Created:</strong>  " + new Date(this.created).toDateString() + "</span></td></tr>" +
-   "<tr><td>" + this.labelNames() + "</td>" +
-   "<td><span class='right'><strong>Comments:</strong> " + this.comments + "</span></td></tr></table>"
-  ].join("")
+  return ["<li><div class='collapsible-header'>Title: " + this.title + "</div>" +
+   "<div class='collapsible-body'><p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
+   "<a class='display-in-line float-right'>" + this.labelNames() + "</a></div>" + "</li>"].join("")
 }

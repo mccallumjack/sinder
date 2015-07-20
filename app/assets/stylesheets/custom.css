@@ -93,6 +93,26 @@
   width: 70%;
 }
 
+/*Other custom CSS*/
+
+#display-in-line{
+  display: inline-block;
+}
+
+#float-right{
+  float: right;
+}
+
+#repo-header{
+  margin: 3%;
+  height: 100%
+}
+
+#repo-top-half{
+  margin-top: 1%;
+  margin-bottom: 5%;
+  height: 220px;
+}
 
 #github_logo{
   width: 100px;

@@ -27,6 +27,7 @@ gem 'octokit', '~> 3.0'
 
 gem 'nokogiri'
 gem 'rest-client', '~> 1.8.0'
+gem 'materialize-sass', '~> 0.96.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

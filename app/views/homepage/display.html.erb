@@ -2,37 +2,43 @@
   <div class="card large">
 
     <div id="repo-header" class="center-align">
-      <h3 id="repo-title">Repo Name</h3>
-      <h5 id="repo-full-name">Repo Full Name</h5>
-      <p id="repo-description">Description</p>
-    </div>
+      <div class="row blue darken-4 center-align">
+        <div id="repo-top-half" class="white-text col m10 offset-m1">
 
-    <div id="repo-attributes">
-    <div class="container">
-      <p>Language: <span id="repo-language"></span></p>
-      <p>Stars: <span id="repo-stars"></span></p>
-      <p>Forks: <span id="repo-forks"></span></p>
-    </div>
-    </div>
+          <h3 class="thin" id="repo-title">Repo Name</h3>
+          <h6 class="thin" id="repo-full-name">Repo Full Name</h6>
+          <h5 class="thin" id="repo-description">Description</h5>
 
-    <div class="center-align">
+          <div id="repo-attributes">
+            <div class="display-in-line">
+              <h5 class="thin">Language: <span id="repo-language"></span> Stars: <span id="repo-stars"></span> Forks: <span id="repo-forks"></span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="left-align">
       <h4>Open Issues</h4>
-      <div id="issue-list"></div>
+      <!-- <div> -->
+        <ul id="issue-list" class="collapsible" data-collapsible="accordion">
+        </ul>
+      <!-- </div> -->
     </div>
 
   </div>
 </div>
 
-<div id="display-buttons" class="center-align">
-  <form method="post" action="/hide" data-remote="true">
-    <button type="submit" value="Hide" id="hide" class="waves-effect blue darken-2 btn-large thin btn btn-2">Hide</button>
-    <input type="hidden" name="authenticity_token" value="">
-  </form>
-
-  <form method="post" action="/star" data-remote="true">
-    <button type="submit" value="Like" id="star" class="waves-effect blue darken-2 btn-large thin btn btn-2">Like</button>
-    <input type="hidden" name="authenticity_token" value="">
-  </form>
-
-
+<div id="display-buttons" class="row center-align">
+  <div id="display-in-line">
+    <form id="hide-form" method="post" action="/hide" data-remote="true">
+      <button type="submit" value="Hide" id="hide" class="waves-effect blue darken-2 btn-large thin btn btn-2"> Hide </button>
+      <input type="hidden" name="authenticity_token" value="">
+    </form>
+  </div>
+  <div id="display-in-line">
+    <form method="post" action="/star" data-remote="true">
+      <button type="submit" value="Like" id="star" class="waves-effect blue darken-2 btn-large thin btn btn-2"> Like </button>
+      <input type="hidden" name="authenticity_token" value="">
+    </form>
+  </div>
 </div>
