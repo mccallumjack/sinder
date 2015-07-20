@@ -35,31 +35,31 @@ RepoController.prototype.bindEvents = function(){
   });
 
   // posting the upvotes
-  // $('#star').on('click', function(e){
-  //   e.preventDefault();
-  //   var statusUpdate = {'repo_full_name': $('#repo-title').text()}
-  //   $.ajax({
-  //     url: '/star',
-  //     method: 'POST',
-  //     dataType: 'json',
-  //     data: statusUpdate
+  $('#star').on('click', function(e){
+    e.preventDefault();
+    var statusUpdate = {'repo_full_name': $('#repo-title').text()}
+    $.ajax({
+      url: '/star',
+      method: 'POST',
+      dataType: 'json',
+      data: statusUpdate
 
 
-  //   });
+    });
 
-  // });
+  });
 
-  // // posting the downvotes
-  // $('#hide').on('click', function(e){
-  //   e.preventDefault();
-  //   var statusUpdate = {'repo_full_name': $('#repo-title').text()}
-  //   $.ajax({
-  //     url: '/hide',
-  //     method: 'POST',
-  //     dataType: 'json',
-  //     data: statusUpdate
-  //   });
-  // });
+  // posting the downvotes
+  $('#hide').on('click', function(e){
+    e.preventDefault();
+    var statusUpdate = {'repo_full_name': $('#repo-title').text()}
+    $.ajax({
+      url: '/hide',
+      method: 'POST',
+      dataType: 'json',
+      data: statusUpdate
+    });
+  });
 
 
   $('button').on('click', this.loadNext.bind(repoController))
