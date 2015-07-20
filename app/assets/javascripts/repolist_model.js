@@ -6,7 +6,7 @@ function RepoList() {
 RepoList.prototype.reloadByLanguage = function(language,controller) {
   var that = this
   that.repos = []
-  var request = $.get( "http://sinder.herokuapp.com/api/repos?language=" + language, function() {})
+  var request = $.get( "/api/repos?language=" + language, function() {})
     .done(function(data) {
       var repos = data
       for(var i = 0; i<repos.length;i++){
@@ -19,7 +19,7 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
 
 RepoList.prototype.getRepos = function(user) {
   var that = this
-  var request = $.get( "http://sinder.herokuapp.com/api/repos", function() {})
+  var request = $.get( "/api/repos", function() {})
     .done(function(data) {
       var repos = data
       for(var i = 0; i<repos.length;i++){
