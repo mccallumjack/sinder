@@ -7,7 +7,12 @@ module Api
   class ReposController < ApplicationController
 
     def index
-      repos = params[:language] && params[:language] != "all languages" ? Repo.where("language ilike '#{params[:language]}'") : Repo.all
+      user = User.find_by(github_access_token: session[:access_token])
+      if params[:language] && params[:language] != "all languages" 
+        repos = Repo.language_repos(user, language)
+      else 
+        repos = Repo.all_repos(user)
+      end
       render json: repos
     end
 
