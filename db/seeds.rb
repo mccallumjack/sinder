@@ -51,8 +51,8 @@ def get_contributor_count(repo)
 end
 
 def contributing_file?(repo)
-  doc = doc = Nokogiri::HTML(open(repo.html_url))
-  doc.css(('a:contains("CONTRIBUTING.md")') != nil
+  doc = Nokogiri::HTML(open(repo.html_url))
+  doc.css(('a:contains("CONTRIBUTING")') != nil
 end
 
 client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => ENV['GITHUB_SECRET'])
