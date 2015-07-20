@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get '/display' => "homepage#display"
   get '/github' => "homepage#github"
 
-  get '/api/repos/:full_name/issues' => "api/repos#issues", defaults: { format: :json }
-  
+  get '/api/repos/:id/issues' => "api/repos#issues", defaults: { format: :json }
+
   namespace :api, defaults: {format: :json} do
     resources :repos, only: [:index]
   end

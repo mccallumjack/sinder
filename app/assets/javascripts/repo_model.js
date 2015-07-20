@@ -20,7 +20,7 @@ Repo.prototype.getIssues = function() {
 
   var that = this
   var path = this.full_name
-  var url = "/repos/" + path + "/issues"
+  var url = "/api/repos/" + this.id + "/issues"
 
   var request = $.get(url, function() {})
     .done(function(data) {

@@ -12,11 +12,9 @@ module Api
     end
 
     def issues
-      repo = params[:full_name]
-      result = RestClient.get("https://api.github.com/repos/#{repo}/issues",
-                          {:client_id => CLIENT_ID,
-                           :client_secret => CLIENT_SECRET},
-                           :accept => :json)
+      repo = params[:id]
+      result = RestClient.get("https://api.github.com/repos/#{repo.id}/issues?client_id=#{CLIENT_ID}&client_secret=#{CLIENT_SECRET}"
+
       render json: result
     end
 
