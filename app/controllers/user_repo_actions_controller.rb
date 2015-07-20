@@ -12,7 +12,9 @@ skip_before_action :verify_authenticity_token
   end
 
   def hide
+    puts "OUTSIDE"
     if session[:access_token]
+      puts "INSIDE"
       repo = Repo.find_by(full_name: params[:repo_full_name])
       puts repo
       user = User.find_by(github_access_token: session[:github_access_token])
