@@ -1,5 +1,3 @@
-
-
 function Issue(title,labels,created,comments){
   this.title = title;
   this.labels = labels;
