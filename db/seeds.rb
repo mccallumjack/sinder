@@ -1,10 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'nokogiri'
+require 'open-uri'
+
+
 whitelist = [
   "pydata/pandas",
   "HabitRPG/habitrpg",
@@ -47,12 +44,17 @@ whitelist = [
   "donnemartin/data-science-ipython-notebooks"
 ]
 
+def get_contributor_count(repo)
+  doc = Nokogiri::HTML(open(repo.html_url))
+  contributors_count = doc.css('a:contains("contributors") span.num').text.strip.to_i
+end
+
 client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => ENV['GITHUB_SECRET'])
 
 whitelist.each do |address|
   repo = client.repo address
-  # contributors_count = client.contributors_stats(address).length
-  pull_request_count = client.pull_requests(address).length
+  contributors_count = get_contributor_count(repo)
+  # pull_request_count = client.pull_requests(address).length
   Repo.create!(
     github_repo_id: repo.id,
     url: repo.url,
@@ -65,7 +67,7 @@ whitelist.each do |address|
     forks_count: repo.forks_count,
     open_issues_count: repo.open_issues_count,
     language: repo.language,
-    # contributors_count: contributors_count,
-    pull_request_count: pull_request_count
+    contributors_count: contributors_count,
+    # pull_request_count: pull_request_count
   )
 end
