@@ -19,7 +19,7 @@ class HomepageController < ApplicationController
     result = RestClient.post('https://github.com/login/oauth/access_token',
                           {:client_id => CLIENT_ID,
                            :client_secret => CLIENT_SECRET,
-                           :code => code_params},
+                           :code => params[:code]},
                            :accept => :json)
     puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
     puts result
