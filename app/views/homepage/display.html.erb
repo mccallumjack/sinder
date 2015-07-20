@@ -17,8 +17,3 @@
   <%= button_to "Hide", hide_path, :id =>"hide", remote: true%>
   <%= button_to "Like", star_path, :id =>"star", remote: true %>
 </div>
-
-
-<% if session[:access_token] %>
-  <p>Session access token is: <%= session[:access_token] %></p>
-<% end %>
