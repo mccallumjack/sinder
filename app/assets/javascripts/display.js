@@ -17,6 +17,7 @@ $(function(){
 function RepoView() {
   this.container = $('#repo-container')
   this.title = $('#repo-title')
+  this.fullName = $('#repo-full-name')
   this.description = $('#repo-description')
   this.language = $('#repo-language')
   this.stars = $('#repo-stars')

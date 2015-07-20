@@ -11,6 +11,7 @@ RepoController.prototype.load = function() {
 
 RepoController.prototype.renderRepo = function(repo){
   $(this.view.title).html(repo.name)
+  $(this.view.fullName).html(repo.full_name)
   $(this.view.description).html(repo.description)
   $(this.view.language).html(repo.language)
   $(this.view.stars).html(repo.stargazers_count)
@@ -37,7 +38,7 @@ RepoController.prototype.bindEvents = function(){
   // posting the upvotes
   $('#star').on('click', function(e){
     e.preventDefault();
-    var statusUpdate = {'repo_full_name': $('#repo-title').text()}
+    var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
     $.ajax({
       url: '/star',
       method: 'POST',
@@ -52,7 +53,7 @@ RepoController.prototype.bindEvents = function(){
   // posting the downvotes
   $('#hide').on('click', function(e){
     e.preventDefault();
-    var statusUpdate = {'repo_full_name': $('#repo-title').text()}
+    var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
     $.ajax({
       url: '/hide',
       method: 'POST',
@@ -62,7 +63,7 @@ RepoController.prototype.bindEvents = function(){
   });
 
 
-  $('button').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons').on('click', this.loadNext.bind(repoController))
 
 
 }
