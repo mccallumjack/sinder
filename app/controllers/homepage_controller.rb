@@ -13,20 +13,13 @@ class HomepageController < ApplicationController
   end
 
   def github
-    # token_response = client.exchange_code_for_token(code_params)
-    # session[:access_token] = token_response['access_token']
-
     result = RestClient.post('https://github.com/login/oauth/access_token',
                           {:client_id => CLIENT_ID,
                            :client_secret => CLIENT_SECRET,
                            :code => params[:code]},
                            :accept => :json)
     session[:access_token] = JSON.parse(result)['access_token']
-    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    # puts result['access_token']
-    puts session[:access_token]
-    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    User.where(github_access_token: session[:access_token]).first_or_initialize
+    User.where(github_access_token: session[:access_token]).first_or_create
     redirect_to display_path
   end
 
