@@ -9,7 +9,7 @@ function Repo(json){
   }
 }
 
-Repo.prototype.renderIssues = function() { 
+Repo.prototype.renderIssues = function() {
   for(var i = 0; i < 3; i++) {
     if(typeof this.issues[i] === 'undefined') { break; }
     $("#issue-list").append(this.issues[i].getHTML())
@@ -27,8 +27,9 @@ Repo.prototype.getIssues = function() {
       for(var i = 0; i < data.length; i++){
         var issue = data[i]
         // Don't add the issue if it isn't open
-        if (issue.state != "open") { continue; }
-        that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
+        if (issue.state === "open") {
+          that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
+        }
       }
         that.renderIssues();
     })
