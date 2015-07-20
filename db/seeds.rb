@@ -45,8 +45,7 @@ whitelist = [
 ]
 
 def get_contributor_count(repo)
-  url = repo.html_url
-  doc = Nokogiri::HTML(open(url))
+  doc = Nokogiri::HTML(open(repo.html_url))
   contributors_count = doc.css('a:contains("contributors") span').text.strip.to_i
 end
 
@@ -54,7 +53,7 @@ client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => 
 
 whitelist.each do |address|
   repo = client.repo address
-  contributors_count = client.get_contributor_count(repo)
+  contributors_count = get_contributor_count(repo)
   # pull_request_count = client.pull_requests(address).length
   Repo.create!(
     github_repo_id: repo.id,
