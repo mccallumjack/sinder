@@ -21,11 +21,10 @@ class HomepageController < ApplicationController
                            :client_secret => CLIENT_SECRET,
                            :code => params[:code]},
                            :accept => :json)
+    session[:access_token] = result['access_token']
     puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    puts result
+    puts session[:access_token]
     puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    puts code_params
-    # session[:access_token] = JSON.parse(result)['access_token']
     # User.where(github_access_token: session[:access_token]).first_or_initialize
     redirect_to display_path
   end
