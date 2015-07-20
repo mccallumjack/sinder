@@ -230,6 +230,7 @@ DEPENDENCIES
   jasmine
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   octokit (~> 3.0)
   pg
   rails (= 4.2.3)
