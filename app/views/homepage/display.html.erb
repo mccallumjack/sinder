@@ -24,9 +24,15 @@
 </div>
 
 <div id="display-buttons" class="center-align">
-  <form method="post" action="/star" data-remote="true">
-    <button type="submit" value="Like" id="star" class="waves-effect blue darken-2 btn-large thin btn btn-2">This</button>
+  <form method="post" action="/hide" data-remote="true">
+    <button type="submit" value="Hide" id="hide" class="waves-effect blue darken-2 btn-large thin btn btn-2">Hide</button>
     <input type="hidden" name="authenticity_token" value="">
   </form>
+
+  <form method="post" action="/star" data-remote="true">
+    <button type="submit" value="Like" id="star" class="waves-effect blue darken-2 btn-large thin btn btn-2">Like</button>
+    <input type="hidden" name="authenticity_token" value="">
+  </form>
+
 
 </div>
