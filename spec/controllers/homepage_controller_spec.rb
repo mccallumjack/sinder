@@ -9,7 +9,7 @@ RSpec.describe HomepageController, type: :controller do
 
     it "assigns github secret key to @client_id" do
       get :index
-      expect(assigns(:client_id)).to eq(ENV["GITHUB_KEY"])
+      expect(assigns(:client_id)).to eq(ENV["GITHUB_KEY"]w)
     end
   end
 end
