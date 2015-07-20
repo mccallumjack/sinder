@@ -62,7 +62,7 @@ RepoController.prototype.bindEvents = function(){
   });
 
 
-  $('button').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons').on('click', this.loadNext.bind(repoController))
 
 
 }
