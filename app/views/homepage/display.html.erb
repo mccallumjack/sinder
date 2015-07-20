@@ -2,18 +2,27 @@
   <div class="card large">
 
     <div id="repo-header" class="center-align">
-      <h2 id="repo-title">Repo Name</h2>
-      <h5 id="repo-description">Description</h5>
+      <h3 id="repo-title">Repo Name</h3>
+      <p id="repo-description">Description</p>
     </div>
 
     <div id="repo-attributes">
-      <p>attributes will go here</p>
+    <div class="container">
+      <p>Language: <span id="repo-language"></span></p>
+      <p>Stars: <span id="repo-stars"></span></p>
+      <p>Forks: <span id="repo-forks"></span></p>
+    </div>
+    </div>
+
+    <div class="center-align">
+      <h4>Open Issues</h4>
+      <div id="issue-list"></div>
     </div>
 
   </div>
 </div>
 
 <div id="display-buttons" class="center-align">
-  <%= button_to "Hide", hide_path, :id =>"hide", remote: true%>
+  <%= button_to "Hide", hide_path, :id =>"hide", remote: true %>
   <%= button_to "Like", star_path, :id =>"star", remote: true %>
 </div>

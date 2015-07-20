@@ -14,3 +14,11 @@
   display: inline-block;
   margin-right: 0;
 }
+
+.card.large {
+  height:650px;
+}
+
+table {
+  border-bottom:1px black solid;
+}
