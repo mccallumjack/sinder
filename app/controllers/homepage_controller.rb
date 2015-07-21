@@ -26,7 +26,7 @@ class HomepageController < ApplicationController
 
   def logout
     session[:access_token] = nil
-    redirect_to root
+    redirect_to root_path
   end
 
   private
