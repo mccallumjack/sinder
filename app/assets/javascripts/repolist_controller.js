@@ -18,8 +18,8 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.forks).html(repo.forks_count)
   $(this.view.contributorsCount).html(repo.contributors_count)
   $(this.view.contributorFile).html(repo.contributors_file)
-  $(this.view.contributorsPercent).html((repo.contributors_count / repo.stargazers_count).toFixed(4) * 100 +"%")
-  $(this.view.pullrequestPercent).html((repo.pull_request_count / repo.open_issues_count).toFixed(4) * 100 +"%")
+  $(this.view.contributorsPercent).html((repo.contributors_count *100 / repo.stargazers_count).toFixed(2) +"%")
+  $(this.view.pullrequestPercent).html((repo.pull_request_count *100 / repo.open_issues_count).toFixed(2) +"%")
 
 }
 
