@@ -9,6 +9,14 @@ function Repo(json){
   }
 }
 
+Repo.prototype.contributorIcon = function(){
+  if (this.contributors_file){
+    return '<i class="tiny material-icons">thumb_up</i>';
+  } else {
+    return '<i class="tiny material-icons">thumb_down</i>';
+  }
+}
+
 Repo.prototype.renderIssues = function() {
   for(var i = 0; i < 3; i++) {
     if(typeof this.issues[i] === 'undefined') { break; }

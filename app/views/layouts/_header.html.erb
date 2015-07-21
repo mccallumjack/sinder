@@ -1,5 +1,11 @@
    <nav class="header-color thin">
     <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Sinder</a>
+        <ul class="right hide-on-med-and-down" id="dont-disable">
+          <% if session[:access_token] %>
+            <li class=".dont-disable bold400"><a href="https://www.github.com/stars">Starred Repos</a></li>
+            <li class=".dont-disable bold400"><a href="/logout">Logout</a></li>
+          <% end %>
+        </ul>
         <ul class="right hide-on-med-and-down" id="lang-nav">
           <li><a href="#">All Languages</a></li>
           <li><a href="#">Ruby</a></li>

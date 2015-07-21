@@ -17,7 +17,10 @@ Issue.prototype.labelNames = function(){
 
 Issue.prototype.getHTML = function(){
   return ["<li>" +
-            "<div class='collapsible-header thin bold400 repo-header-color'>" + this.title + "</div>" +
+            "<div class='collapsible-header thin bold400 repo-header-color lighten-2'>" + 
+              "<i class='material-icons'>code</i>" +
+              this.title + 
+            "</div>" +
               "<div class='collapsible-body thin bold400 grey lighten-2'>" +
                 "<div class='display-in-line width70'>" +
                   "<p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
