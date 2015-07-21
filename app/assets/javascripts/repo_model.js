@@ -29,10 +29,7 @@ Repo.prototype.getIssues = function() {
     .done(function(data) {
       for(var i = 0; i < data.length; i++){
         var issue = data[i]
-        // Don't add the issue if it isn't open
-        if (issue.state === "open") {
-          that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
-        }
+        that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
       }
         that.renderIssues();
     })
