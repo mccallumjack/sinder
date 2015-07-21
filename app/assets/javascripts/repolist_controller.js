@@ -26,8 +26,11 @@ RepoController.prototype.renderRepo = function(repo){
 RepoController.prototype.loadNext = function(){
   $("#issue-list").empty()
   var repo = this.repolist.repos.shift()
+  var nextRepo = this.repolist.repos[0]
   this.renderRepo(repo);
-  repo.getIssues()
+  repo.issues.length > 0 ? repo.renderIssues() : ""
+  //Preload the next repo's issues so they are ready by the time the user clicks
+  nextRepo.getIssues()
 }
 
 RepoController.prototype.bindEvents = function(){

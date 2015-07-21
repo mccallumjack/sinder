@@ -28,6 +28,9 @@ gem 'octokit', '~> 3.0'
 gem 'nokogiri'
 gem 'rest-client', '~> 1.8.0'
 
+# Use workers to refresh database data
+gem 'whenever', :require => false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
