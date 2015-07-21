@@ -69,15 +69,25 @@ RepoController.prototype.bindEvents = function(){
   });
 
 
-  $('#display-buttons').on('click', this.loadNext.bind(repoController))
-  $('#display-buttons').on('click', toggleTimeout)
+  $('#display-buttons button').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons button').on('click', this.toggleTimeout(this))
 
 }
 
-function toggleTimeout(event) {
-  var that = event.target
-  $(that).addClass('disabled');
-  setTimeout(function(){ $(that).removeClass('disabled') }, 1500)
+RepoController.prototype.toggleTimeout = function(controller) {
+
+  return function(event){
+    var that = event.target
+    $(that).addClass('disabled');
+    $(that).off();
+
+    setTimeout(function(){ 
+      $(that).removeClass('disabled');
+      $(that).on('click', controller.loadNext.bind(controller));
+      $(that).on('click', controller.toggleTimeout(controller));
+    }, 1500)
+  }
+  
 }
 
 

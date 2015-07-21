@@ -6,6 +6,9 @@
           <li><a href="#">Python</a></li>
           <li><a href="#">JavaScript</a></li>
           <li><a href="#">Go</a></li>
+          <% if session[:access_token] %>
+            <li><a href="/logout">Logout</a></li>
+          <% end %>
         </ul>
       </div>
 
