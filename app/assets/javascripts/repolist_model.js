@@ -26,6 +26,8 @@ RepoList.prototype.getRepos = function(user) {
         var repo = new Repo(repos[i])
         that.repos.push(repo)
     }
+    // Preload the first repo's issues
+    that.repos[0].getIssues()
   })
 }
 
