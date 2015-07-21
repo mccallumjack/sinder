@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   def check_interactions
     client = Octokit::Client.new(access_token: github_access_token)
     check_starred(client.starred)
-    check_forked(client.)
   end
 
   def check_starred(starred_repos)
