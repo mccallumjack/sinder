@@ -31,6 +31,7 @@
 </div>
 
 <div id="display-buttons" class="row center-align wide-button">
+  <% if session[:access_token] %>
   <div class="display-in-line">
     <form id="hide-form" method="post" action="/hide" data-remote="true">
       <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
@@ -43,4 +44,8 @@
       <input type="hidden" name="authenticity_token" value="">
     </form>
   </div>
+  <% else %>
+  <button class="waves-effect btn-large thin btn btn-2">Next</button>
+  <% end %>
+
 </div>
