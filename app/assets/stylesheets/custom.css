@@ -132,12 +132,20 @@ nav .brand-logo{
   width: 70%;
 }
 
+.width90{
+  width: 90%;
+}
+
 .float-right{
   float: right;
 }
 
 .small-top-margin{
   margin-top: 3%;
+}
+
+.medium-height{
+  height: 100px;
 }
 
 #repo-header{
@@ -148,7 +156,7 @@ nav .brand-logo{
 #repo-top-half{
   margin-top: 1%;
   margin-bottom: 5%;
-  height: 220px;
+  height: 150px;
 }
 
 #github_logo{
