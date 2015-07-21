@@ -193,6 +193,14 @@ nav .brand-logo{
   color: #C3D7DF;
 }
 
-table {
-  border-bottom:1px black solid;
+
+.label {
+  display: inline;
+  padding: .8em 1em .8em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
 }
+

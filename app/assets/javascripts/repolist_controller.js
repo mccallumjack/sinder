@@ -16,6 +16,11 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.language).html(repo.language)
   $(this.view.stars).html(repo.stargazers_count)
   $(this.view.forks).html(repo.forks_count)
+  $(this.view.contributorsCount).html(repo.contributors_count)
+  $(this.view.contributorFile).html(repo.contributors_file)
+  $(this.view.contributorsPercent).html((repo.contributors_count / repo.stargazers_count).toFixed(4) * 100 +"%")
+  $(this.view.pullrequestPercent).html((repo.pull_request_count / repo.open_issues_count).toFixed(4) * 100 +"%")
+
 }
 
 RepoController.prototype.loadNext = function(){
