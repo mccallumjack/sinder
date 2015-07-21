@@ -23,7 +23,7 @@ function RepoView() {
   this.stars = $('#repo-stars')
   this.forks = $('#repo-forks')
   this.contributorsCount = $('#contributors-count')
-  this.contributorsFile = $('#contributors-file')
+  this.contributorFile = $('#contributors-file')
   this.contributorsPercent = $('#contributors-percent')
   this.pullrequestPercent = $('#pull-request-percent')
 }
