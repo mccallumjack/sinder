@@ -9,9 +9,9 @@
         </div>
           <div class="row center">
             <% if session[:access_token] %>
-              <a href="/display" class="btn-large waves-effect waves-light repo-header-color">Get Started</a>
+              <%= <a href="/display" class="btn-large waves-effect waves-light repo-header-color">Go to Repos</a> %>
             <% else %>
-              <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a>
+              <%= <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a> %>
             <% end %>
           </div>
         <br><br>
@@ -70,3 +70,4 @@
 </div></a>
 
 
+<p>Session is: <%= session[:access_token] %></>
