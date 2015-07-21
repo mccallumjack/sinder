@@ -31,9 +31,11 @@ describe Repo do
   end
 
   it "should update repo with the propper information" do
-    updated = Repo.update_all[0]
-    expect(updated).to eq(repo)
-    expect(updated.language).to eq(nil)
-    expect(updated.forks_count).to be > 1107
+    Octokit::Client.any_instance.stub(:repo).and_return( FactoryGirl.build(:updated) )
+
+    model_response = Repo.update_all[0]
+    expect(model_response.class.name).to eq('Repo')
+    expect(model_response.language).to eq('Python')
+    expect(model_response.contributors_count).to be(3)
   end
 end

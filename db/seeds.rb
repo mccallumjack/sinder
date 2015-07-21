@@ -6,7 +6,6 @@ whitelist = [
   "pydata/pandas",
   "HabitRPG/habitrpg",
   "scikit-learn/scikit-learn",
-  "nnnick/Chart.js",
   "ruby/ruby",
   "golang/go",
   "debops/debops",

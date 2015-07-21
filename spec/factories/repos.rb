@@ -11,8 +11,11 @@ FactoryGirl.define do
     forks_count 9
     language "Ruby"
     open_issues_count 0
-    contributors_count 3
+    contributors_count 2
     contributors_file true
     pull_request_count 15
+    factory :updated do
+      language "Python"
+    end
   end
 end
