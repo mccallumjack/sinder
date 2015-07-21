@@ -6,7 +6,6 @@ whitelist = [
   "pydata/pandas",
   "HabitRPG/habitrpg",
   "scikit-learn/scikit-learn",
-  "nnnick/Chart.js",
   "ruby/ruby",
   "golang/go",
   "debops/debops",
@@ -64,7 +63,7 @@ end
 client = Octokit::Client.new(:client_id => ENV['GITHUB_KEY'], :client_secret => ENV['GITHUB_SECRET'])
 
 whitelist.each do |address|
-  repo = client.repo address
+  repo = client.repo(address)
   contributors_count = get_contributor_count(repo)
   contrib_file = contributing_file?(repo)
   pull_request_count = open_pull_requests(repo)
