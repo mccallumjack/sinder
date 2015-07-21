@@ -157,7 +157,7 @@ nav .brand-logo{
 }
 
 .small-top-margin{
-  margin-top: 3%;
+  margin-top: 7%;
 }
 
 .small-left-margin{
@@ -271,4 +271,8 @@ nav .brand-logo{
   color: #fff;
   background-color: #e91e63;
   border-color: #ccc;
+}
+
+.collapsible-body p {
+  padding: 1rem 2rem;
 }
