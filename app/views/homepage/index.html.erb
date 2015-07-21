@@ -7,9 +7,13 @@
         <div class="row center">
           <h5 class="header col s12 light white-text">We Match developers with Open Source projects</h5>
         </div>
-        <div class="row center">
-          <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a>
-        </div>
+          <div class="row center">
+            <% if session[:access_token] %>
+              <%= <a href="/display" class="btn-large waves-effect waves-light repo-header-color">Go to Repos</a> %>
+            <% else %>
+              <%= <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a> %>
+            <% end %>
+          </div>
         <br><br>
 
       </div>
@@ -66,3 +70,4 @@
 </div></a>
 
 
+<p>Session is: <%= session[:access_token] %></>
