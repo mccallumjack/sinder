@@ -17,7 +17,7 @@ class Repo < ActiveRecord::Base
   def self.language_repos(user, language)
   	language_repo_array = []
   	self.all_repos(user).each do |repo|
-  		if repo.language == language
+  		if repo.language.downcase == language.downcase
   			language_repo_array << repo
   		end
   	end
