@@ -8,7 +8,9 @@ function Issue(title,labels,created,comments){
 Issue.prototype.labelNames = function(){
   var labelnames = []
   for(var i = 0; i < this.labels.length; i++) {
-    labelnames.push(this.labels[i].name)
+    var label = this.labels[i]
+    var labelHTML = "<span class='label thin' style='background-color:#" + label.color + ";color:" + getContrastYIQ(label.color) + ";'>" + label.name + "</span>" 
+    labelnames.push(labelHTML)
   }
   return labelnames.join(" ")
 }
@@ -26,4 +28,14 @@ Issue.prototype.getHTML = function(){
                 "</div>" +
               "</div>" +
           "</li>"].join("")
+}
+
+
+// This function is used in our labels to apply white text to dark backgrounds and black text to light backgrounds
+function getContrastYIQ(hexcolor){
+    var r = parseInt(hexcolor.substr(0,2),16);
+    var g = parseInt(hexcolor.substr(2,2),16);
+    var b = parseInt(hexcolor.substr(4,2),16);
+    var yiq = ((r*299)+(g*587)+(b*114))/1000;
+    return (yiq >= 128) ? 'black' : 'white';
 }
