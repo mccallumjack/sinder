@@ -70,10 +70,15 @@ RepoController.prototype.bindEvents = function(){
 
 
   $('#display-buttons').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons').on('click', toggleTimeout)
 
 }
 
-
+function toggleTimeout(event) {
+  var that = event.target
+  $(that).addClass('disabled');
+  setTimeout(function(){ $(that).removeClass('disabled') }, 1500)
+}
 
 
 
