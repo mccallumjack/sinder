@@ -22,6 +22,10 @@ function RepoView() {
   this.language = $('#repo-language')
   this.stars = $('#repo-stars')
   this.forks = $('#repo-forks')
+  this.contributorsCount = $('#contributors-count')
+  this.contributorsFile = $('#contributors-file')
+  this.contributorsPercent = $('#contributors-percent')
+  this.pullrequestPercent = $('#pull-request-percent')
 }
 
 // RepoList Controller
