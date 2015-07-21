@@ -10,7 +10,6 @@ function Repo(json){
 }
 
 Repo.prototype.contributorIcon = function(){
-  console.log(this.contributors_file);
   if (this.contributors_file){
     return '<i class="tiny material-icons">thumb_up</i>';
   } else {
