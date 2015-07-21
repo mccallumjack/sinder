@@ -30,7 +30,7 @@
   font-size:16px;
   font-weight: 400;
   line-height: 45px;
-  margin: 0 auto 2em;
+  margin: 0;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -115,7 +115,7 @@ nav .brand-logo{
   width: 350px;
 }
 
-.repo-header-color{
+.repo-blue-color{
   background-color: #C3D7DF;
 }
 
@@ -128,16 +128,49 @@ nav .brand-logo{
   color: #2D3033;
 }
 
+.width90{
+  width: 90%;
+}
+
 .width70{
   width: 70%;
+}
+
+.width60{
+  width: 60%;
+}
+
+.width50{
+  width: 50%;
+}
+
+.width20{
+  width: 20%;
 }
 
 .float-right{
   float: right;
 }
 
+.float-left{
+  float: left;
+}
+
 .small-top-margin{
   margin-top: 3%;
+}
+
+.small-left-margin{
+  margin-left: 3.5%;
+}
+
+.margin5{
+  margin: 5%;
+}
+
+
+.medium-height{
+  height: 100px;
 }
 
 #repo-header{
@@ -146,9 +179,20 @@ nav .brand-logo{
 }
 
 #repo-top-half{
-  margin-top: 1%;
+  /*margin-top: 1%*/
   margin-bottom: 5%;
-  height: 220px;
+  height: 160px;
+}
+
+#stats-box-left{
+  margin-left: 5%;
+  margin-right: 0;
+  width: 30%;
+}
+
+#stats-box-right{
+  margin-top: 2%;
+  width: 60%;
 }
 
 #github_logo{

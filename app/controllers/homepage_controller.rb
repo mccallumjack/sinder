@@ -19,7 +19,8 @@ class HomepageController < ApplicationController
                            :code => params[:code]},
                            :accept => :json)
     session[:access_token] = JSON.parse(result)['access_token']
-    User.where(github_access_token: session[:access_token]).first_or_create
+    user = User.where(github_access_token: session[:access_token]).first_or_create
+    user.check_interactions
     redirect_to display_path
   end
 

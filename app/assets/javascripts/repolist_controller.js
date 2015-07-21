@@ -14,7 +14,7 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.fullName).html(repo.full_name)
   $(this.view.description).html(repo.description)
   $(this.view.language).html(repo.language)
-  $(this.view.stars).html(repo.stargazers_count)
+  $(this.view.stars).html(repo.stargazers_count )
   $(this.view.forks).html(repo.forks_count)
   $(this.view.contributorsCount).html(repo.contributors_count)
   $(this.view.contributorFile).html(repo.contributorIcon())
@@ -69,11 +69,26 @@ RepoController.prototype.bindEvents = function(){
   });
 
 
-  $('#display-buttons').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons button').on('click', this.loadNext.bind(repoController))
+  $('#display-buttons button').on('click', this.toggleTimeout(this))
 
 }
 
+RepoController.prototype.toggleTimeout = function(controller) {
 
+  return function(event){
+    var that = event.target
+    $(that).addClass('disabled');
+    $(that).off();
+
+    setTimeout(function(){
+      $(that).removeClass('disabled');
+      $(that).on('click', controller.loadNext.bind(controller));
+      $(that).on('click', controller.toggleTimeout(controller));
+    }, 1500)
+  }
+
+}
 
 
 

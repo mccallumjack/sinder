@@ -5,16 +5,20 @@
         <br><br>
         <h1 class="header center pale-blue-text text-lighten-2">Welcome to Sinder</h1>
         <div class="row center">
-          <h5 class="header col s12 light white-text">We Match developers with Open Source projects</h5>
+          <h5 class="header col s12 light white-text">We match developers with Open Source projects</h5>
         </div>
-        <div class="row center">
-          <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a>
-        </div>
+          <div class="row center">
+            <% if session[:access_token] %>
+              <a href="/display" class="btn-large waves-effect waves-light repo-header-color">Go to Repos</a>
+            <% else %>
+              <a href="#modal1" class="btn-large waves-effect waves-light repo-header-color modal-trigger modal-close">Get Started</a>
+            <% end %>
+          </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><%= image_tag 'background1.jpg' %></div>
+    <div class="parallax"><%= image_tag 'night-sky.jpg' %></div>
   </div>
 
 
@@ -55,14 +59,14 @@
 
 <!-- This is a hidden modal -->
 
-<a href="https://github.com/login/oauth/authorize?scope=user:email,public_repo&client_id=<%= @client_id %>"><div id="modal1" class="modal">
-  <div class="modal-content">
-    <%= image_tag "github.png", id: "github_logo", class: "col s2" %>
+<a href="https://github.com/login/oauth/authorize?scope=user:email,public_repo&client_id=<%= @client_id %>">
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <%= image_tag "github.png", id: "github_logo", class: "col s2" %>
+    </div>
+    <div id="modal-text">
+      <h3><b>Sign in with Github!</b></h3>
+      <a href="/display">Continue without connecting your github</a>
+    </div>
   </div>
-  <div id="modal-text">
-    <h3><b>Sign in with Github!</b></h3>
-    If that link doesn't work, remember to provide your own <a href="/v3/oauth/#web-application-flow"><span>Client ID</span></a>!
-  </div>
-</div></a>
-
-
+</a>
