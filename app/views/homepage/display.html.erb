@@ -2,28 +2,56 @@
   <div class="card large">
 
     <div id="repo-header" class="center-align">
-      <div class="row repo-header-color center-align rounded-corners">
+      <div class="row repo-blue-color center-align rounded-corners">
 
         <div id="repo-top-half" class="col m10 offset-m1">
           <h3 class="thin" id="repo-title">Repo Name</h3>
-          <h6 class="thin" id="repo-full-name">Repo Full Name</h6>
-          <h5 class="thin" id="repo-description">Description</h5>
-
-          <div id="repo-attributes">
-            <div class="display-in-line">
-              <h5 class="thin">Language: <span id="repo-language"></span>
-              Stars: <span id="repo-stars"></span> Forks: <span id="repo-forks"></span></h5>
-              <h5 class="thin"> Contributors Count:  <span id="contributors-count"></span> Contributors File:  <span id="contributors-file"></span>
-                 Contributors Percent: <span id="contributors-percent"></span>
-                 Pull Request Percent: <span id="pull-request-percent"></span>
-              </h5>
-            </div>
-          </div>
+          <h6 class="thin bold500" id="repo-full-name">Repo Full Name</h6>
+          <h6 class="thin" id="repo-description">Description</h6>
+          <h5 class="thin bold500 white-text" id="repo-language">Language<span id="repo-language"></span></h5>
         </div>
       </div>
 
+      <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90">
+        <div id="stats-box-left" class="float-left display-in-line">
+          <h6 class="thin">
+             <table>
+              <tbody>
+                <tr>
+                  <td><span class="bold400">Stars:</span> <span id="repo-stars"></span></td>
+                  <td><span class="bold400">Contributors:</span> <span id="contributors-count"></span></td>
+
+                </tr>
+                <tr>
+                  <td><span class="bold400">Forks:</span> <span id="repo-forks"></span></td>
+                </tr>
+              </tbody>
+            </table>
+         </h6>
+       </div>
+       <div id="stats-box-right" class="width50 small-side-margins display-in-line float-right">
+          <div class="display-in-line float-left small-left-margin center-align width20 col s6 m3">
+            <span id="contributors-percent" class="thin bold500 white-text margin5"></span><br>
+            <span class="thin">Participation Rate</span>
+          </div>
+          <div class="display-in-line float-left small-left-margin width20 col s6 m3">
+            <span id="pull-request-percent" class="thin bold500 white-text margin5"></span><br>
+            <span class="thin">Pull Request Rate</span>
+          </div>
+          <div class="display-in-line float-left small-left-margin width20 col s6 m3">
+            <i class="small material-icons">thumb_up</i>
+            <span class="thin">Contributor File</span>
+          </div>
+          <div class="display-in-line float-left small-left-margin width20 col s6 m3">
+            <i class="small material-icons">thumb_up</i>
+            <span class="thin">Contributor File</span>
+          </div>
+      </div>
+    </div>
+
+
     <div class="left-align">
-      <h5 class="thin">Open Issues</h5>
+      <h6 class="thin bold500">Open Issues</h6>
         <ul id="issue-list" class="collection-item collapsible avatar" data-collapsible="accordion">
         </ul>
     </div>
