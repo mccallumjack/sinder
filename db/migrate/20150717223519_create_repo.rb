@@ -12,8 +12,8 @@ class CreateRepo < ActiveRecord::Migration
       t.integer :forks_count
       t.string :language
       t.integer :open_issues_count
-      t.integer :contributors_count #need to calculate and set with separate API request
-      t.integer :pull_request_count #need to calculate and set with separate API request
+      t.integer :contributors_count
+      t.integer :pull_request_count
 
       t.timestamps
     end

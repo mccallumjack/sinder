@@ -23,6 +23,11 @@ class HomepageController < ApplicationController
     redirect_to display_path
   end
 
+  def logout
+    session[:access_token] = nil
+    redirect_to root
+  end
+
   private
   def code_params
     params.permit(:code)
