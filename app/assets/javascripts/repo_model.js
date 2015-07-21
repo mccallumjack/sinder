@@ -31,7 +31,6 @@ Repo.prototype.getIssues = function() {
         var issue = data[i]
         that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
       }
-        that.renderIssues();
     })
 }
 
