@@ -29,4 +29,13 @@ describe Repo do
   it "should not return repos in the wrong language" do
     expect(Repo.language_repos(user, 'Javascript').length).to eq(0)
   end
+
+  it "should update repo with the propper information" do
+    Octokit::Client.any_instance.stub(:repo).and_return( FactoryGirl.build(:updated) )
+
+    model_response = Repo.update_all[0]
+    expect(model_response.class.name).to eq('Repo')
+    expect(model_response.language).to eq('Python')
+    expect(model_response.contributors_count).to be(3)
+  end
 end

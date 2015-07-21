@@ -3,14 +3,13 @@ module Api
   CLIENT_SECRET = ENV["GITHUB_SECRET"]
   require 'rest-client'
 
-
   class ReposController < ApplicationController
 
     def index
       user = User.find_by(github_access_token: session[:access_token])
-      if params[:language] && params[:language] != "all languages" 
+      if params[:language] && params[:language] != "all languages"
         repos = user ? Repo.language_repos(user, params[:language]) : Repo.where("language ilike '#{params[:language]}'")
-      else 
+      else
         repos = user ? Repo.all_repos(user) : Repo.all
       end
       render json: repos
