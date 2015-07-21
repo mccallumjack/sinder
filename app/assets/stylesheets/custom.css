@@ -170,7 +170,7 @@ nav .brand-logo{
 
 
 .medium-height{
-  height: 100px;
+  height: 120px;
 }
 
 #repo-header{
@@ -264,5 +264,11 @@ nav .brand-logo{
 .custom-badge-style{
   color: #fff;
   background-color: #6EC2CF;
+  border-color: #ccc;
+}
+
+.language-badge-style{
+  color: #fff;
+  background-color: #e91e63;
   border-color: #ccc;
 }
