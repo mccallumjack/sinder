@@ -37,7 +37,7 @@ RepoController.prototype.bindEvents = function(){
 
   var that = this
 
-  $('#lang-nav li').not('.dont-disable').on('click', 'a', function(e){
+  $('#lang-nav li').on('click', 'a', function(e){
       e.preventDefault();
       var lang = $(this).text().toLowerCase();
       that.repolist.reloadByLanguage(lang,that)
