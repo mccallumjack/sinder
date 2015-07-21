@@ -14,7 +14,16 @@ Issue.prototype.labelNames = function(){
 }
 
 Issue.prototype.getHTML = function(){
-  return ["<li><div class='collapsible-header'>Title: " + this.title + "</div>" +
-   "<div class='collapsible-body'><p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
-   "<a class='display-in-line float-right'>" + this.labelNames() + "</a></div>" + "</li>"].join("")
+  return ["<li>" +
+            "<div class='collapsible-header thin bold400 repo-header-color'>" + this.title + "</div>" +
+              "<div class='collapsible-body thin bold400 grey lighten-2'>" +
+                "<div class='display-in-line width70'>" +
+                  "<p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
+                "</div>" +
+                "<div class='valign-wrapper float-right'>" +
+                  "<div class='small-top-margin valign'>" + "<p>" + this.labelNames() + "</p>" +
+                  "</div>" +
+                "</div>" +
+              "</div>" +
+          "</li>"].join("")
 }

@@ -11,6 +11,10 @@
   font-weight: 400;
 }
 
+.bold300{
+  font-weight: 300;
+}
+
 .light_italic{
   font-style: italic;
 }
@@ -95,12 +99,45 @@
 
 /*Other custom CSS*/
 
-#display-in-line{
+body{
+  background-color: #2D3033;
+}
+
+nav ul a{
+  color: #2D3033;
+}
+
+nav .brand-logo{
+  color: #2D3033;
+}
+
+.wide-button .btn{
+  width: 350px;
+}
+
+.repo-header-color{
+  background-color: #C3D7DF;
+}
+
+.display-in-line{
   display: inline-block;
 }
 
-#float-right{
+.header-color{
+  background-color: #EBEBEB;
+  color: #2D3033;
+}
+
+.width70{
+  width: 70%;
+}
+
+.float-right{
   float: right;
+}
+
+.small-top-margin{
+  margin-top: 3%;
 }
 
 #repo-header{
@@ -133,6 +170,19 @@
 
 .card.large {
   height:650px;
+  border-radius: 20px;
+}
+
+.rounded-corners{
+  border-radius: 20px;
+}
+
+.red-text{
+  color: #c62828;
+}
+
+.pale-blue-text{
+  color: #C3D7DF;
 }
 
 table {

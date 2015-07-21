@@ -2,8 +2,8 @@
   <div class="card large">
 
     <div id="repo-header" class="center-align">
-      <div class="row blue darken-4 center-align">
-        <div id="repo-top-half" class="white-text col m10 offset-m1">
+      <div class="row repo-header-color center-align rounded-corners">
+        <div id="repo-top-half" class="col m10 offset-m1">
 
           <h3 class="thin" id="repo-title">Repo Name</h3>
           <h6 class="thin" id="repo-full-name">Repo Full Name</h6>
@@ -18,26 +18,23 @@
       </div>
 
     <div class="left-align">
-      <h4>Open Issues</h4>
-      <!-- <div> -->
-        <ul id="issue-list" class="collapsible" data-collapsible="accordion">
+      <h5 class="thin">Open Issues</h5>
+        <ul id="issue-list" class="collection-item collapsible avatar" data-collapsible="accordion">
         </ul>
-      <!-- </div> -->
     </div>
-
   </div>
 </div>
 
-<div id="display-buttons" class="row center-align">
-  <div id="display-in-line">
+<div id="display-buttons" class="row center-align wide-button">
+  <div class="display-in-line">
     <form id="hide-form" method="post" action="/hide" data-remote="true">
-      <button type="submit" value="Hide" id="hide" class="waves-effect blue darken-2 btn-large thin btn btn-2"> Hide </button>
+      <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
       <input type="hidden" name="authenticity_token" value="">
     </form>
   </div>
-  <div id="display-in-line">
+  <div class="display-in-line">
     <form method="post" action="/star" data-remote="true">
-      <button type="submit" value="Like" id="star" class="waves-effect blue darken-2 btn-large thin btn btn-2"> Like </button>
+      <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
       <input type="hidden" name="authenticity_token" value="">
     </form>
   </div>
