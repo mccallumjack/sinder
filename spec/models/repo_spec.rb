@@ -29,4 +29,11 @@ describe Repo do
   it "should not return repos in the wrong language" do
     expect(Repo.language_repos(user, 'Javascript').length).to eq(0)
   end
+
+  it "should update repo with the propper information" do
+    updated = Repo.update_all[0]
+    expect(updated).to eq(repo)
+    expect(updated.language).to eq(nil)
+    expect(updated.forks_count).to be > 1107
+  end
 end
