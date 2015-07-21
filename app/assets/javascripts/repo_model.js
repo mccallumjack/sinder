@@ -13,8 +13,11 @@ Repo.prototype.renderIssues = function() {
   for(var i = 0; i < 3; i++) {
     if(typeof this.issues[i] === 'undefined') { break; }
     $("#issue-list").append(this.issues[i].getHTML())
+  };
+   $('.collapsible').collapsible({
+      accordion : true
+    });
   }
-}
 
 Repo.prototype.getIssues = function() {
 

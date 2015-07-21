@@ -12,6 +12,7 @@ FactoryGirl.define do
     language "Ruby"
     open_issues_count 0
     contributors_count 3
+    contributors_file true
     pull_request_count 15
   end
 end
