@@ -37,8 +37,18 @@ RepoController.prototype.bindEvents = function(){
 
   var that = this
 
+  $('#repo-language').on('click',function(e){
+    e.preventDefault();
+    var lang = $(this).text().toLowerCase();
+    $('#lang-nav li').removeClass('active')
+    $('#' + lang).addClass('active')
+    that.repolist.reloadByLanguage(lang,that)
+  });
+
   $('#lang-nav li').on('click', 'a', function(e){
       e.preventDefault();
+      $('#lang-nav li').removeClass('active')
+      $(e.target).parent('li').addClass('active')
       var lang = $(this).text().toLowerCase();
       that.repolist.reloadByLanguage(lang,that)
   });
