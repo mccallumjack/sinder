@@ -1,18 +1,18 @@
 <div class="container" id="repo-container">
   <div class="card large">
 
-    <div id="repo-header" class="center-align">
-      <div class="row repo-blue-color center-align rounded-corners">
+    <div id="repo-header" class="center-align" >
+      <div class="row repo-blue-color center-align rounded-corners" data-intro="Basic information about the project, including the name, a description, and the primary language" data-position="right">
 
-        <div id="repo-top-half" class="col m10 offset-m1">
-          <h3 class="thin" id="repo-title" data-intro="The project name in Github" data-position: "right">Repo Name</h3>
-          <h6 class="thin bold500" id="repo-full-name" data-intro="The full name in github, used in all URLs" data-position: "left">Repo Full Name</h6>
-          <h6 class="thin" id="repo-description" data-intro="A brief description of the repo" data-position: "left">Description</h6>
-          <span class="thin bold500 white-text custom-badge language-badge-style" id="repo-language" data-intro="The primary language of the repo" data-position: "right">Language<span id="repo-language"></span></span>
+        <div id="repo-top-half" class="col m10 offset-m1" >
+          <h3 class="thin" id="repo-title" >Repo Name</h3>
+          <h6 class="thin bold500" id="repo-full-name">Repo Full Name</h6>
+          <h6 class="thin" id="repo-description">Description</h6>
+          <span class="thin bold500 white-text custom-badge language-badge-style" id="repo-language">Language</span>
         </div>
       </div>
 
-      <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90">
+      <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90" data-intro="Stats and information that are pertinent to Open Source. More information about these metrics can be found on our FAQ or on the tooltips" data-position="left">
         <div id="stats-box-left" class="float-left display-in-line">
           <h6 class="thin">
              <table>
@@ -50,7 +50,7 @@
     </div>
 
 
-    <div class="left-align">
+    <div class="left-align" data-intro="These are currently open issues on the repo. Think of these as a few examples of issues that the project needs help on" data-position="right">
       <h6 class="thin bold500">Open Issues</h6>
         <ul id="issue-list" class="collection-item collapsible avatar" data-collapsible="accordion">
         </ul>
@@ -62,13 +62,13 @@
 
   <div id="display-buttons" class="row center-align wide-button">
     <% if session[:access_token] %>
-    <div class="display-in-line">
+    <div class="display-in-line" data-intro="Hide the repo so you won't see it the next time you go through." data-position="left">
       <form id="hide-form" method="post" action="/hide" data-remote="true">
         <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
         <input type="hidden" name="authenticity_token" value="">
       </form>
     </div>
-    <div class="display-in-line">
+    <div class="display-in-line" data-intro="Star the repo. This will add it to your Github 'Starred Repo' page" data-position="right">
       <form method="post" action="/star" data-remote="true">
         <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
         <input type="hidden" name="authenticity_token" value="">
