@@ -9,14 +9,18 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
   var request = that.repoRequest(language)
     .done(function(data) {
       var repos = data
-      for(var i = 0; i<repos.length;i++){
-        var repo = new Repo(repos[i])
-        that.repos.push(repo)
-    }
-    // Preload the first repo's issues
-    that.repos[0].getIssues()
-    // Wait 1.5 seconds for issues to come in then display
-    setTimeout(function(){ controller.loadNext()},1200)
+      if (repos == null) {
+        $('#modal1').openModal();
+      } else {
+        for(var i = 0; i<repos.length;i++){
+          var repo = new Repo(repos[i])
+          that.repos.push(repo)
+        }
+      }
+      // Preload the first repo's issues
+      that.repos[0].getIssues()
+      // Wait 1.5 seconds for issues to come in then display
+      setTimeout(function(){ controller.loadNext()},1200)
     })
 }
 
@@ -29,8 +33,8 @@ RepoList.prototype.getRepos = function(user) {
         var repo = new Repo(repos[i])
         that.repos.push(repo)
       }
-    // Preload the first repo's issues
-    that.repos[0].getIssues()
+      // Preload the first repo's issues
+      that.repos[0].getIssues()
     })
 }
 
