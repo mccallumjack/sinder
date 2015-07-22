@@ -3,7 +3,6 @@
 
     <div id="repo-header" class="center-align">
       <div class="row repo-blue-color center-align rounded-corners">
-
         <div id="repo-top-half" class="col m10 offset-m1">
           <h3 class="thin" id="repo-title">Repo Name</h3>
           <h6 class="thin bold500" id="repo-full-name">Repo Full Name</h6>
@@ -15,21 +14,21 @@
       <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90">
         <div id="stats-box-left" class="float-left display-in-line">
           <h6 class="thin">
-             <table>
+            <table>
               <tbody>
                 <tr>
                   <td><span class="bold400">Stars:</span> <span id="repo-stars"></span></td>
                   <td><span class="bold400">Contributors:</span> <span id="contributors-count"></span></td>
-
                 </tr>
                 <tr>
                   <td><span class="bold400">Forks:</span> <span id="repo-forks"></span></td>
                 </tr>
               </tbody>
             </table>
-         </h6>
-       </div>
-       <div id="stats-box-right" class="width50 small-side-margins display-in-line float-right">
+          </h6>
+        </div>
+
+        <div id="stats-box-right" class="width50 small-side-margins display-in-line float-right">
           <div class="display-in-line float-left small-left-margin center-align width20 col s6 m3">
             <span id="contributors-percent" class="thin bold600 custom-badge custom-badge-style tooltipped" data-position="top" data-delay="35" data-tooltip="% of contributors to stargazers"></span><br>
             <span class="thin">Participation Rate</span>
@@ -46,36 +45,50 @@
             <i class="small material-icons">thumb_up</i><br>
             <span class="thin">Code of Conduct</span>
           </div>
+        </div>
       </div>
-    </div>
 
-
-    <div class="left-align">
-      <h6 class="thin bold500">Open Issues</h6>
+      <div class="left-align">
+        <h6 class="thin bold500">Open Issues</h6>
         <ul id="issue-list" class="collection-item collapsible avatar" data-collapsible="accordion">
         </ul>
+      </div>
     </div>
-
   </div>
 
+  <div id="display-buttons" class="row center-align wide-button">
+    <% if session[:access_token] %>
+      <div class="display-in-line">
+        <form id="hide-form" method="post" action="/hide" data-remote="true">
+          <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
+          <input type="hidden" name="authenticity_token" value="">
+        </form>
+      </div>
+      <div class="display-in-line">
+        <form method="post" action="/star" data-remote="true">
+          <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
+          <input type="hidden" name="authenticity_token" value="">
+        </form>
+      </div>
+    <% else %>
+      <button class="waves-effect btn-large thin btn btn-2">Next</button>
+    <% end %>
+  </div>
 </div>
 
-<div id="display-buttons" class="row center-align wide-button">
-  <% if session[:access_token] %>
-  <div class="display-in-line">
-    <form id="hide-form" method="post" action="/hide" data-remote="true">
-      <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
-      <input type="hidden" name="authenticity_token" value="">
-    </form>
+<div id="modal1" class="modal">
+  <div id="modal-text">
+    <h3><b>Thank you for using Sinder!</b></h3>
+    <h4>You have finished all of the repos that meet your current search criteria. Please change your search criteria or reset your search history to continue.</h4>
+    <h4>
+      <% if session[:access_token] %>
+        <a href="https://www.github.com/stars">Contribute to one of your starred repos</a>
+        <p>or</p>
+        <a href="/reset_interactions">Reset search history</a>
+      <% else %>
+        <a href="/display">Restart search</a>
+      <% end %>
+    </h4>
+    <br>
   </div>
-  <div class="display-in-line">
-    <form method="post" action="/star" data-remote="true">
-      <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
-      <input type="hidden" name="authenticity_token" value="">
-    </form>
-  </div>
-  <% else %>
-  <button class="waves-effect btn-large thin btn btn-2">Next</button>
-  <% end %>
-
 </div>
