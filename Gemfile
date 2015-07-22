@@ -60,3 +60,8 @@ group :development, :test do
   gem 'spring'
 end
 
+# Chardin gives us a nice tutorial overlay
+group :assets do
+  gem "chardinjs-rails"
+end
+

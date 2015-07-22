@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require chardinjs
 
 //= require_tree .
