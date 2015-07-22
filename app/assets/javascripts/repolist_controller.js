@@ -27,6 +27,9 @@ RepoController.prototype.renderRepo = function(repo){
 RepoController.prototype.loadNext = function(){
   $("#issue-list").empty()
   var repo = this.repolist.repos.shift()
+  if (repo == null) {
+    $('#modal1').openModal();
+  }
   var nextRepo = this.repolist.repos[0]
   this.renderRepo(repo);
   repo.issues.length > 0 ? repo.renderIssues() : ""
