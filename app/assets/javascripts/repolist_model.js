@@ -9,7 +9,7 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
   var request = that.repoRequest(language)
     .done(function(data) {
       var repos = data
-      if (typeof repos == undefined) {
+      if (repos.length === 0) {
         $('#modal1').openModal();
         return;
       } else {
