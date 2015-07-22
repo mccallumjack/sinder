@@ -5,10 +5,10 @@
       <div class="row repo-blue-color center-align rounded-corners">
 
         <div id="repo-top-half" class="col m10 offset-m1">
-          <h3 class="thin" id="repo-title">Repo Name</h3>
-          <h6 class="thin bold500" id="repo-full-name">Repo Full Name</h6>
-          <h6 class="thin" id="repo-description">Description</h6>
-          <span class="thin bold500 white-text custom-badge language-badge-style" id="repo-language">Language<span id="repo-language"></span>
+          <h3 class="thin" id="repo-title" data-intro="The project name in Github" data-position: "right">Repo Name</h3>
+          <h6 class="thin bold500" id="repo-full-name" data-intro="The full name in github, used in all URLs" data-position: "left">Repo Full Name</h6>
+          <h6 class="thin" id="repo-description" data-intro="A brief description of the repo" data-position: "left">Description</h6>
+          <span class="thin bold500 white-text custom-badge language-badge-style" id="repo-language" data-intro="The primary language of the repo" data-position: "right">Language<span id="repo-language"></span></span>
         </div>
       </div>
 
@@ -60,22 +60,23 @@
 
 </div>
 
-<div id="display-buttons" class="row center-align wide-button">
-  <% if session[:access_token] %>
-  <div class="display-in-line">
-    <form id="hide-form" method="post" action="/hide" data-remote="true">
-      <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
-      <input type="hidden" name="authenticity_token" value="">
-    </form>
-  </div>
-  <div class="display-in-line">
-    <form method="post" action="/star" data-remote="true">
-      <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
-      <input type="hidden" name="authenticity_token" value="">
-    </form>
-  </div>
-  <% else %>
-  <button class="waves-effect btn-large thin btn btn-2">Next</button>
-  <% end %>
+  <div id="display-buttons" class="row center-align wide-button">
+    <% if session[:access_token] %>
+    <div class="display-in-line">
+      <form id="hide-form" method="post" action="/hide" data-remote="true">
+        <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2"> Hide </button>
+        <input type="hidden" name="authenticity_token" value="">
+      </form>
+    </div>
+    <div class="display-in-line">
+      <form method="post" action="/star" data-remote="true">
+        <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
+        <input type="hidden" name="authenticity_token" value="">
+      </form>
+    </div>
+    <% else %>
+    <button class="waves-effect btn-large thin btn btn-2">Next</button>
+    <% end %>
 
+  </div>
 </div>
