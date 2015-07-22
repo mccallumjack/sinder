@@ -11,6 +11,7 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
       var repos = data
       if (typeof repos == undefined) {
         $('#modal1').openModal();
+        return;
       } else {
         for(var i = 0; i<repos.length;i++){
           var repo = new Repo(repos[i])
