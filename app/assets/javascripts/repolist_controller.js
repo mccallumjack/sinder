@@ -85,6 +85,30 @@ RepoController.prototype.toggleTimeout = function(controller) {
       $(that).removeClass('disabled');
       $(that).on('click', controller.loadNext.bind(controller));
       $(that).on('click', controller.toggleTimeout(controller));
+
+      if($(that).is('#hide')){
+        $(that).on('click', function(e){
+          e.preventDefault();
+          var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
+          $.ajax({
+            url: '/hide',
+            method: 'POST',
+            dataType: 'json',
+            data: statusUpdate
+          });
+        });
+        } else if($(that).is('#star')){
+          $(that).on('click', function(e){
+            e.preventDefault();
+            var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
+            $.ajax({
+              url: '/star',
+              method: 'POST',
+              dataType: 'json',
+              data: statusUpdate
+            });
+          });
+        }
     }, 1500)
   }
 
