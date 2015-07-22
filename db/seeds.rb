@@ -40,7 +40,23 @@ whitelist = [
   "caskroom/homebrew-cask",
   "arunagw/omniauth-twitter",
   "vinta/awesome-python",
-  "donnemartin/data-science-ipython-notebooks"
+  "donnemartin/data-science-ipython-notebooks",
+  "24pullrequests/24pullrequests",
+  "aasm/aasm",
+  "algorrent/algorrent",
+  "formly-js/angular-formly",
+  "babel/babel",
+  "bundler/bundler",
+  "CocoaPods/CocoaPods",
+  "exercism/exercism.io",
+  "gitlabhq/gitlabhq",
+  "growingdevs/growingdevs.github.io",
+  "hacken-in/website",
+  "instructure/fukuzatsu",
+  "pixijs/pixi-haxe",
+  "caskroom/homebrew-cask",
+  "julianguyen/ifme",
+  "CenturyLinkLabs/panamax-ui"
 ]
 
  # Nokogiri methods
