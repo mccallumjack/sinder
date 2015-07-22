@@ -16,26 +16,32 @@
 - Slack communication, use @person to reach them after hours
 
 ##Workflow
-- Update master frequently 
+- Update master frequently
 - Yell if there's a pull request or new merge to master
-- Give a 3 min shpeal on Tech Spike 
+- Give a 3 min shpeal on Tech Spike
 - Create tickets in pivital tracker for all work you do and things you think of that needs to be done
-- Good commit messages, present tense 
+- Good commit messages, present tense
 - Code review and leave comment
 - Hold each other accountable for team norms
 - Pair as needed
 - Features: +1 for code review, +2 for merge
-- Bugs: +1 
+- Bugs: +1
 - Grab vertical slice
 - Write tests on everything you grab
 
 ##Tech Stack
 - Rails
 - Postgres
-- AngularJS
-- Materialize
-- Sidekiq (http://sidekiq.org/)
+- Materialize CSS
+- Whenever gem (https://github.com/javan/whenever)
 - Octokit gem (https://github.com/octokit/octokit.rb)
+- Figaro gem (https://github.com/laserlemon/figaro)
+- Nokogiri gem (https://github.com/sparklemotion/nokogiri)
 - Travis CI
 - Coveralls
-- Pivital Tracker (https://www.pivotaltracker.com/n/projects/1388960)
+- Pivotal Tracker (https://www.pivotaltracker.com/n/projects/1388960)
+
+
+## Heroku Deployment
+
+www.sinder.herokuapp.com
