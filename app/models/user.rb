@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  def destroy_interactions
+    UserRepoAction.where(user: self).destroy_all
+  end
 end

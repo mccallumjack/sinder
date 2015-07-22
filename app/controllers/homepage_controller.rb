@@ -29,6 +29,13 @@ class HomepageController < ApplicationController
     redirect_to root_path
   end
 
+  def reset_interactions
+    user = User.find_by(github_access_token: session[:access_token])
+    user.destroy_interactions
+    user.check_interactions
+    redirect_to display_path
+  end
+
   private
   def code_params
     params.permit(:code)
