@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/display' => "homepage#display"
   get '/github' => "homepage#github"
   get '/logout' => "homepage#logout"
+  get '/reset_interactions' => "homepage#reset_interactions"
 
   get '/api/repos/:id/issues' => "api/repos#issues", defaults: { format: :json }
 

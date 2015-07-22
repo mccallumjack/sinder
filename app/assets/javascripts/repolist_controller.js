@@ -26,6 +26,9 @@ RepoController.prototype.renderRepo = function(repo){
 RepoController.prototype.loadNext = function(){
   $("#issue-list").empty()
   var repo = this.repolist.repos.shift()
+  if (repo == null) {
+    $('#modal1').openModal();
+  }
   var nextRepo = this.repolist.repos[0]
   this.renderRepo(repo);
   repo.issues.length > 0 ? repo.renderIssues() : ""
@@ -37,7 +40,25 @@ RepoController.prototype.bindEvents = function(){
 
   var that = this
 
+  $('#repo-language').on('click',function(e){
+    e.preventDefault();
+    var lang = $(this).text().toLowerCase();
+    $('#lang-nav li').removeClass('active')
+    $('#' + lang).addClass('active')
+    that.repolist.reloadByLanguage(lang,that)
+  });
+
+// binding to the top language menu
   $('#lang-nav li').on('click', 'a', function(e){
+      e.preventDefault();
+      $('#lang-nav li').removeClass('active')
+      $(e.target).parent('li').addClass('active')
+      var lang = $(this).text().toLowerCase();
+      that.repolist.reloadByLanguage(lang,that)
+  });
+  
+// binding to the side language menu
+  $('#nav-mobile li').on('click', 'a', function(e){
       e.preventDefault();
       var lang = $(this).text().toLowerCase();
       that.repolist.reloadByLanguage(lang,that)
@@ -85,6 +106,30 @@ RepoController.prototype.toggleTimeout = function(controller) {
       $(that).removeClass('disabled');
       $(that).on('click', controller.loadNext.bind(controller));
       $(that).on('click', controller.toggleTimeout(controller));
+
+      if($(that).is('#hide')){
+        $(that).on('click', function(e){
+          e.preventDefault();
+          var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
+          $.ajax({
+            url: '/hide',
+            method: 'POST',
+            dataType: 'json',
+            data: statusUpdate
+          });
+        });
+        } else if($(that).is('#star')){
+          $(that).on('click', function(e){
+            e.preventDefault();
+            var statusUpdate = {'repo_full_name': $('#repo-full-name').text()}
+            $.ajax({
+              url: '/star',
+              method: 'POST',
+              dataType: 'json',
+              data: statusUpdate
+            });
+          });
+        }
     }, 1500)
   }
 

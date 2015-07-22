@@ -249,6 +249,10 @@ nav .brand-logo{
   padding: 1rem 2rem;
 }
 
+.toast {
+  background-color: #2D3033;
+}
+
 #repo-header{
   margin: 3%;
   height: 100%
