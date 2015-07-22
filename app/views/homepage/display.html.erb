@@ -30,19 +30,19 @@
         <div id="stats-box-right" class="width50 small-side-margins display-in-line float-right">
           <div class="display-in-line float-left small-left-margin center-align width20 col s6 m3">
             <span id="contributors-percent" class="thin bold600 custom-badge custom-badge-style tooltipped" data-position="top" data-delay="35" data-tooltip="% of contributors to stargazers">17.53%</span><br>
-            <span class="thin">Participation Rate</span>
+            <span class="thin smaller-fonts bold300">Participation Rate</span>
           </div>
           <div class="display-in-line float-left small-left-margin width20 col s6 m3">
             <span id="pull-request-percent" class="thin bold600 custom-badge custom-badge-style tooltipped" data-position="top" data-delay="35" data-tooltip="% open pull requests to open issues">68.34%</span><br>
-            <span class="thin">Pull Request Rate</span>
+            <span class="thin smaller-fonts bold300">Pull Request Rate</span>
           </div>
-          <div class="display-in-line float-left small-left-margin width20 col s6 m3">
-            <i class="small material-icons tooltipped" data-position="top" data-delay="35" data-tooltip="CONTRIBUTING file in the root directory?">thumb_up</i><br>
-            <span class="thin">Contributor Guidelines</span>
+          <div class="display-in-line float-left small-left-margin width20 col s6 m3 tooltipped" data-position="top" data-delay="35" data-tooltip="CONTRIBUTING file in the root directory?">
+            <i id="contributors-file" class="small material-icons"></i><br>
+            <span class="thin smaller-fonts bold300">Contributor Guidelines</span>
           </div>
           <div class="display-in-line float-left small-left-margin width20 col s6 m3 tooltipped" data-position="top" data-delay="35" data-tooltip="CODE_OF_CONDUCT file in the root directory? If not, make this your first contribution!">
-            <i class="small material-icons">thumb_up</i><br>
-            <span class="thin">Code of Conduct</span>
+            <i id="code-of-conduct-icon" class="small material-icons"></i><br>
+            <span class="thin smaller-fonts bold300">Code of Conduct</span>
           </div>
         </div>
       </div>
@@ -86,13 +86,13 @@
     <% if session[:access_token] %>
       <div class="display-in-line" data-intro="Hide the repo so you won't see it the next time you go through." data-position="left">
         <form id="hide-form" method="post" action="/hide" data-remote="true">
-          <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is hidden! </span>', 2000)"> Hide </button>
+          <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is hidden! </span>', 2000, 'rounded')"> Hide </button>
           <input type="hidden" name="authenticity_token" value="">
         </form>
       </div>
       <div class="display-in-line" data-intro="Star the repo. This will add it to your Github 'Starred Repo' page" data-position="right">
         <form method="post" action="/star" data-remote="true">
-          <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is starred! </span>', 2000)"> Like </button>
+          <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is starred! </span>', 2000, 'rounded')"> Like </button>
           <input type="hidden" name="authenticity_token" value="">
         </form>
       </div>
