@@ -11,11 +11,20 @@ function Repo(json){
 
 Repo.prototype.contributorIcon = function(){
   if (this.contributors_file){
-    return '<i class="tiny material-icons">thumb_up</i>';
+    return "thumb_up";
   } else {
-    return '<i class="tiny material-icons">thumb_down</i>';
-  }
+    return "error_outline";
+  };
 }
+
+Repo.prototype.codeOfConductIcon = function(){
+    if (this.code_of_conduct){
+    return "stars";
+  } else {
+    return "error_outline";
+  };
+}
+
 
 Repo.prototype.renderIssues = function() {
   for(var i = 0; i < 3; i++) {

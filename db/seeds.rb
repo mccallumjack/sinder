@@ -54,7 +54,6 @@ whitelist = [
   "hacken-in/website",
   "instructure/fukuzatsu",
   "pixijs/pixi-haxe",
-  "caskroom/homebrew-cask",
   "julianguyen/ifme",
   "CenturyLinkLabs/panamax-ui"
 ]
@@ -104,6 +103,7 @@ whitelist.each do |address|
     language: repo.language,
     contributors_count: contributors_count,
     contributors_file: contrib_file,
-    pull_request_count: pull_request_count
+    pull_request_count: pull_request_count,
+    code_of_conduct: code_of_conduct
   )
 end

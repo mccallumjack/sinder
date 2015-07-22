@@ -17,10 +17,10 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.stars).html(repo.stargazers_count )
   $(this.view.forks).html(repo.forks_count)
   $(this.view.contributorsCount).html(repo.contributors_count)
-  $(this.view.contributorFile).html(repo.contributorIcon())
+  $(this.view.contributorFile).text(repo.contributorIcon())
+  $(this.view.codeOfConduct).text(repo.codeOfConductIcon())
   $(this.view.contributorsPercent).html((repo.contributors_count *100 / repo.stargazers_count).toFixed(2) +"%")
   $(this.view.pullrequestPercent).html((repo.pull_request_count *100 / repo.open_issues_count).toFixed(2) +"%")
-
 }
 
 RepoController.prototype.loadNext = function(){
