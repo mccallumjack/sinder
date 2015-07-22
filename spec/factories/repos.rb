@@ -17,5 +17,8 @@ FactoryGirl.define do
     factory :updated do
       language "Python"
     end
+    factory :repo_for_array do
+      github_repo_id {Faker::Number.number(7)}
+    end
   end
 end
