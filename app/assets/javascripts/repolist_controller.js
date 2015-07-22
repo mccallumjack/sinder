@@ -18,6 +18,7 @@ RepoController.prototype.renderRepo = function(repo){
   $(this.view.forks).html(repo.forks_count)
   $(this.view.contributorsCount).html(repo.contributors_count)
   $(this.view.contributorFile).text(repo.contributorIcon())
+
   $(this.view.codeOfConduct).text(repo.codeOfConductIcon())
   $(this.view.contributorsPercent).html((repo.contributors_count *100 / repo.stargazers_count).toFixed(2) +"%")
   $(this.view.pullrequestPercent).html((repo.pull_request_count *100 / repo.open_issues_count).toFixed(2) +"%")
@@ -56,7 +57,7 @@ RepoController.prototype.bindEvents = function(){
       var lang = $(this).text().toLowerCase();
       that.repolist.reloadByLanguage(lang,that)
   });
-  
+
 // binding to the side language menu
   $('#nav-mobile li').on('click', 'a', function(e){
       e.preventDefault();

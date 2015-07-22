@@ -11,6 +11,10 @@ function Repo(json){
 
 Repo.prototype.contributorIcon = function(){
   if (this.contributors_file){
+    var contributorIconTrue = {
+      icon: "thumb_up",
+      color: "yellow"
+    }
     return "thumb_up";
   } else {
     return "error_outline";
