@@ -13,7 +13,10 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
         var repo = new Repo(repos[i])
         that.repos.push(repo)
     }
-    controller.loadNext()
+    // Preload the first repo's issues
+    that.repos[0].getIssues()
+    // Wait 1.5 seconds for issues to come in then display
+    setTimeout(function(){ controller.loadNext()},1200)
   })
 }
 
