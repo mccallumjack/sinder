@@ -37,7 +37,14 @@ RepoController.prototype.bindEvents = function(){
 
   var that = this
 
+// binding to the top language menu
   $('#lang-nav li').on('click', 'a', function(e){
+      e.preventDefault();
+      var lang = $(this).text().toLowerCase();
+      that.repolist.reloadByLanguage(lang,that)
+  });
+// binding to the side language menu
+  $('#nav-mobile li').on('click', 'a', function(e){
       e.preventDefault();
       var lang = $(this).text().toLowerCase();
       that.repolist.reloadByLanguage(lang,that)
