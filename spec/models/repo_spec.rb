@@ -36,6 +36,5 @@ describe Repo do
     model_response = Repo.update_all[0]
     expect(model_response.class.name).to eq('Repo')
     expect(model_response.language).to eq('Python')
-    expect(model_response.contributors_count).to be(3)
   end
 end
