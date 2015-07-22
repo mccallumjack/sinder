@@ -8,6 +8,7 @@
     if ($('#repo-title').text() == "Sinder")
     {
       $('body').chardinJs('start');
+      $('#all-lang').addClass('active')
     }
 
   }); // end of document ready
