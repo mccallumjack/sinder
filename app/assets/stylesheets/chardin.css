@@ -41,10 +41,11 @@
   max-width: 200px; }
   .chardinjs-tooltip.chardinjs-left {
     margin-left: -135px;
-    padding-right: 10px; }
+    padding-right: 15px;
+    margin-right: 5px; }
   .chardinjs-tooltip.chardinjs-right {
     margin-right: -135px;
-    padding-left: 10px; }
+    padding-left: 15px; }
   .chardinjs-tooltip.chardinjs-bottom {
     margin-bottom: -50px;
     padding-top: 10px; }
