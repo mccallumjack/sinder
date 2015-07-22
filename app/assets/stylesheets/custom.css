@@ -276,3 +276,7 @@ nav .brand-logo{
 .collapsible-body p {
   padding: 1rem 2rem;
 }
+
+.toast {
+  background-color: 2D3033;
+}
