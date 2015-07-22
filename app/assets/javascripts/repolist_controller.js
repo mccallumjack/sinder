@@ -30,6 +30,7 @@ RepoController.prototype.loadNext = function(){
   var repo = this.repolist.repos.shift()
   if (repo == null) {
     $('#modal1').openModal();
+    return;
   }
   var nextRepo = this.repolist.repos[0]
   this.renderRepo(repo);
