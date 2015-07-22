@@ -70,12 +70,12 @@
   </div>
   <div class="display-in-line">
     <form method="post" action="/star" data-remote="true">
-      <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2"> Like </button>
+      <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('I am a toast', 4000)"> Like </button>
       <input type="hidden" name="authenticity_token" value="">
     </form>
   </div>
   <% else %>
-  <button class="waves-effect btn-large thin btn btn-2">Next</button>
+  <button class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('I am a toast', 1000)"> Next </button>
   <% end %>
 
 </div>
