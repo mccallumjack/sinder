@@ -160,6 +160,10 @@ nav .brand-logo{
   width: 20%;
 }
 
+.width5{
+  width: 5%;
+}
+
 .float-right{
   float: right;
 }
@@ -262,6 +266,10 @@ nav .brand-logo{
   background-color: grey lighten-4;
 }
 
+.modal-content{
+  width: 90%;
+}
+
 
 #repo-header{
   margin: 3%;
@@ -275,13 +283,15 @@ nav .brand-logo{
 }
 
 #stats-box-left{
-  margin-left: 5%;
+ margin-left: 5%;
   margin-right: 0;
+  margin-top: 1%;
   width: 30%;
+  height: 85px;
 }
 
 #stats-box-right{
-  margin-top: 2%;
+  margin-top: 3%;
   width: 60%;
 }
 
@@ -299,5 +309,9 @@ nav .brand-logo{
 
 #login-alternate-link a:hover{
   color: #ff6d00;
+}
+
+#stats-box-question{
+  margin-top: 5px;
 }
 
