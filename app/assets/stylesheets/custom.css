@@ -148,6 +148,14 @@ nav .brand-logo{
   width: 50%;
 }
 
+.width40{
+  width: 30%;
+}
+
+.width30{
+  width: 30%;
+}
+
 .width20{
   width: 20%;
 }
@@ -200,7 +208,6 @@ nav .brand-logo{
 .pale-blue-text{
   color: #C3D7DF;
 }
-
 
 .label {
   display: inline;
@@ -284,4 +291,9 @@ nav .brand-logo{
   float: right;
   width: 70%;
   margin-top: 5%;
+  margin-right: 5%;
+}
+
+#login-alternate-link a:hover{
+  color: #ff6d00;
 }
