@@ -2,10 +2,10 @@ function Repo(json){
 
   this.issues = []
 
-    for(var key in json) {
-      if(json.hasOwnProperty(key)) {
-          this[key] = json[key];
-      }
+  for(var key in json) {
+    if(json.hasOwnProperty(key)) {
+        this[key] = json[key];
+    }
   }
 }
 
