@@ -21,7 +21,9 @@ RepoList.prototype.reloadByLanguage = function(language,controller) {
       // Preload the first repo's issues
       that.repos[0].getIssues()
       // Wait 1.5 seconds for issues to come in then display
-      setTimeout(function(){ controller.loadNext()},1200)
+      setTimeout(function(){ 
+        $('#loader').addClass('hide')
+        controller.loadNext()},1200)
     })
 }
 
