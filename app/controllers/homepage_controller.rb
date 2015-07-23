@@ -9,6 +9,7 @@ class HomepageController < ApplicationController
   end
 
   def display
+    @client_id = CLIENT_ID
     render 'display'
   end
 

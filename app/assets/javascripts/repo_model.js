@@ -22,11 +22,15 @@ Repo.prototype.contributorIcon = function(){
 }
 
 Repo.prototype.codeOfConductIcon = function(){
-    if (this.code_of_conduct){
+  if (this.code_of_conduct){
     return "stars";
   } else {
     return "error_outline";
   };
+}
+
+Repo.prototype.pushedAt = function() {
+  return new Date(this.pushed_at).toDateString();
 }
 
 
@@ -35,10 +39,10 @@ Repo.prototype.renderIssues = function() {
     if(typeof this.issues[i] === 'undefined') { break; }
     $("#issue-list").append(this.issues[i].getHTML())
   };
-   $('.collapsible').collapsible({
-      accordion : true
-    });
-  }
+  $('.collapsible').collapsible({
+    accordion : true
+  });
+}
 
 Repo.prototype.getIssues = function() {
 
@@ -51,7 +55,7 @@ Repo.prototype.getIssues = function() {
       for(var i = 0; i < data.length; i++){
         var issue = data[i]
         if (issue.state === "open"){
-        that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
+          that.issues.push(new Issue(issue.title,issue.labels,issue.created_at,issue.comments))
         }
       }
     })
