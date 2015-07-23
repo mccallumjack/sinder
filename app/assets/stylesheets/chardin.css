@@ -40,10 +40,10 @@
   transition: opacity 0.1s ease-out;
   max-width: 175px; }
   .chardinjs-tooltip.chardinjs-left {
-    margin-left: -135px;
+    margin-left: -14%;
     padding-right: 15px;}
   .chardinjs-tooltip.chardinjs-right {
-    margin-right: -100px;
+    margin-right: -6%;
     padding-left: 15px; }
   .chardinjs-tooltip.chardinjs-bottom {
     margin-bottom: -50px;
