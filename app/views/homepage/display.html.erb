@@ -1,4 +1,7 @@
 <%= render 'layouts/display_header' %>
+<div class="progress hide" id="loader">
+     <div class="indeterminate"></div>
+ </div>
 <div class="container" id="repo-container">
   <div class="card large">
     <div id="repo-header" class="center-align" >
@@ -76,7 +79,7 @@
         </form>
       </div>
     <% else %>
-      <button class="waves-effect btn-large thin btn btn-2" data-intro="Go to the next repo" data-position="left" onclick="Materialize.toast('<span class=&quot;grey lighten-4 black-text&quot;> Repo is starred! </span>', 2000)" >Next</button>
+      <button class="waves-effect btn-large thin btn btn-2" data-intro="Go to the next repo" data-position="left">Next</button>
     <% end %>
   </div>
 </div>
