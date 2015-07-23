@@ -304,7 +304,6 @@ nav .brand-logo{
 }
 
 #repo-top-half{
-  /*margin-top: 1%*/
   margin-bottom: 5%;
   height: 160px;
 }
@@ -312,7 +311,6 @@ nav .brand-logo{
 #stats-box-left{
   margin-left: 5%;
   margin-right: 0;
-  /*margin-top: 1%;*/
   width: 30%;
   height: 85px;
 }
