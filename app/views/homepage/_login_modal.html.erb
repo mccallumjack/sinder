@@ -1,0 +1,15 @@
+<!-- This is a hidden modal -->
+  <div id="modal1" class="modal width50">
+    <a href="https://github.com/login/oauth/authorize?scope=user:email,public_repo&client_id=<%= @client_id %>">
+      <div class="modal-content">
+        <%= image_tag "github.png", id: "github_logo", class: "col s2" %>
+      </div>
+    </a>
+    <div id="modal-text" class="center-align">
+      <a href="https://github.com/login/oauth/authorize?scope=user:email,public_repo&client_id=<%= @client_id %>">
+        <h3><span class="thin bold500">Sign in with Github!</span></h3><br>
+      </a>
+      <a href="/display" class="black-text">Continue without connecting your github</a>
+    </div>
+  </div>
+</a>
