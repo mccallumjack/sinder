@@ -257,8 +257,11 @@ nav .brand-logo{
 }
 
 .toast {
-  background-color: #2D3033;
+
+  opacity: .5;
+  background-color: grey lighten-4;
 }
+
 
 #repo-header{
   margin: 3%;
@@ -297,3 +300,4 @@ nav .brand-logo{
 #login-alternate-link a:hover{
   color: #ff6d00;
 }
+
