@@ -4,6 +4,8 @@
           <% if session[:access_token] %>
             <li class=".dont-disable bold400"><a href="https://www.github.com/stars" target="_blank">Starred Repos</a></li>
             <li class=".dont-disable bold400"><a href="/logout">Logout</a></li>
+          <% else %>
+            <li class=".dont-disable bold400"><a href="https://github.com/login/oauth/authorize?scope=user:email,public_repo&client_id=<%= @client_id %>">Login</a></li>
           <% end %>
         </ul>
 <!--         <ul class="right hide-on-med-and-down" id="lang-nav" >
