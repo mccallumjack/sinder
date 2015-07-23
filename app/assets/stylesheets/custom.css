@@ -278,5 +278,6 @@ nav .brand-logo{
 }
 
 .toast {
-  background-color: 2D3033;
+  opacity: .5;
+  background-color: grey lighten-4;
 }

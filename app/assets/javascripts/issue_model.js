@@ -9,7 +9,7 @@ Issue.prototype.labelNames = function(){
   var labelnames = []
   for(var i = 0; i < this.labels.length; i++) {
     var label = this.labels[i]
-    var labelHTML = "<span class='label thin' style='background-color:#" + label.color + ";color:" + getContrastYIQ(label.color) + ";'>" + label.name + "</span>" 
+    var labelHTML = "<span class='label thin' style='background-color:#" + label.color + ";color:" + getContrastYIQ(label.color) + ";'>" + label.name + "</span>"
     labelnames.push(labelHTML)
   }
   return labelnames.join(" ")
@@ -17,12 +17,12 @@ Issue.prototype.labelNames = function(){
 
 Issue.prototype.getHTML = function(){
   return ["<li>" +
-            "<div class='collapsible-header thin bold400 repo-header-color lighten-2'>" + 
+            "<div class='collapsible-header thin bold400 repo-header-color lighten-2'>" +
               "<i class='material-icons'>code</i>" +
-              this.title + 
+              this.title +
             "</div>" +
               "<div class='collapsible-body thin bold400 grey lighten-2'>" +
-                "<div class='display-in-line width70'>" +
+                "<div class='display-in-line width68'>" +
                   "<p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
                 "</div>" +
                 "<div class='valign-wrapper float-right'>" +
