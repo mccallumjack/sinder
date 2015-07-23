@@ -54,7 +54,6 @@
   .chardinjs-tooltip.chardinjs-right:before, .chardinjs-tooltip.chardinjs-left:after, .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-tooltip.chardinjs-top:after {
     content: "";
     display: inline-block;
-    background-color:;
     height: 1px;
     overflow: hidden;
     position: absolute; }
