@@ -22,7 +22,7 @@ Issue.prototype.getHTML = function(){
               this.title +
             "</div>" +
               "<div class='collapsible-body thin bold400 grey lighten-2'>" +
-                "<div class='display-in-line width68'>" +
+                "<div class='display-in-line width60'>" +
                   "<p>Created: " + new Date(this.created).toDateString() + "<br>" + "Comments: " + this.comments + "</p>" +
                 "</div>" +
                 "<div class='valign-wrapper float-right'>" +
