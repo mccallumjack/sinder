@@ -38,13 +38,12 @@
   -ms-transition: opacity 0.1s ease-out;
   -o-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out;
-  max-width: 200px; }
+  max-width: 175px; }
   .chardinjs-tooltip.chardinjs-left {
     margin-left: -135px;
-    padding-right: 15px;
-    margin-right: 5px; }
+    padding-right: 15px;}
   .chardinjs-tooltip.chardinjs-right {
-    margin-right: -135px;
+    margin-right: -100px;
     padding-left: 15px; }
   .chardinjs-tooltip.chardinjs-bottom {
     margin-bottom: -50px;
