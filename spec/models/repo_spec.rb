@@ -26,7 +26,7 @@ describe Repo do
     expect(repo.contributors_file).to eq(true)
   end
 
-  it "should return fals if code of conduct doesn't exist" do
+  it "should return false if code of conduct doesn't exist" do
     expect(repo.code_of_conduct).to eq(false)
   end
 
