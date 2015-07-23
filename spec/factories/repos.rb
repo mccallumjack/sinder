@@ -14,6 +14,7 @@ FactoryGirl.define do
     contributors_count 2
     contributors_file true
     pull_request_count 15
+    code_of_conduct false
     factory :updated do
       language "Python"
     end
