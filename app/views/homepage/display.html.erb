@@ -1,7 +1,7 @@
 <div class="container" id="repo-container">
   <div class="card large">
     <div id="repo-header" class="center-align" >
-      <div class="row repo-blue-color center-align rounded-corners" data-intro="Basic information about the project, including the name, a description, and the primary language" data-position="right">
+      <div class="row repo-blue-color center-align rounded-corners" data-intro="Basic information about the project including the name, a description, and the primary language" data-position="right">
         <div id="repo-top-half" class="col m10 offset-m1" >
           <h3 class="thin" id="repo-title" ><a href="http://www.github.com/mccallumjack/sinder" target="_blank">Sinder</a></h3>
           <h6 class="thin bold500" id="repo-full-name">mccallumjack/sinder</h6>
@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90" data-intro="Stats and information that are pertinent to Open Source. More information about these metrics can be found on our FAQ or on the tooltips" data-position="left">
+      <div id="repo-attributes" class="repo-blue-color rounded-corners display-in-line medium-height width90" data-intro="Stats and information that are pertinent to Open Source. A glossary of these metrics can be seen by clicking the question mark within the box at any time." data-position="left">
         <div id="stats-box-left" class="float-left display-in-line">
           <h6 class="thin">
             <table>
@@ -47,38 +47,8 @@
         </div>
       </div>
 
-      <div class="left-align" data-intro="These are currently open issues on the repo. Think of these as a few examples of issues that the project needs help on" data-position="right">
-        <h6 class="thin bold500">Open Issues</h6>
-        <ul id="issue-list" class="collection-item collapsible avatar" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header thin bold400 repo-header-color lighten-2"><i class="material-icons">code</i>Add more repos to the list</div>
-            <div class="collapsible-body thin bold400 grey lighten-2" style="">
-              <div class="display-in-line width70"><p>Created: Wed Jul 22 2015<br>Comments: 0</p></div>
-              <div class="valign-wrapper float-right">
-                <div class="small-top-margin valign"><p></p></div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header thin bold400 repo-header-color lighten-2"><i class="material-icons">code</i>API - improve server response time </div>
-            <div class="collapsible-body thin bold400 grey lighten-2" style="">
-              <div class="display-in-line width70"><p>Created: Wed Jul 22 2015<br>Comments: 0</p></div>
-              <div class="valign-wrapper float-right">
-                <div class="small-top-margin valign"><p><span class="label thin" style="background-color:#AD7FA8;color:black;">API Design</span> <span class="label thin" style="background-color:#AFEEEE;color:black;">Timeseries</span></p></div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header thin bold400 repo-header-color lighten-2"><i class="material-icons">code</i>Fix header CSS Bug</div>
-            <div class="collapsible-body thin bold400 grey lighten-2" style="">
-              <div class="display-in-line width70"><p>Created: Wed Jul 22 2015<br>Comments: 1</p></div>
-              <div class="valign-wrapper float-right">
-                <div class="small-top-margin valign"><p><span class="label thin" style="background-color:#e10c02;color:white;">Bug</span> <span class="label thin" style="background-color:#0052cc;color:white;">Google I/O</span></p></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <%= render 'issues' %>
+
     </div>
   </div>
 
@@ -97,7 +67,7 @@
         </form>
       </div>
     <% else %>
-      <button class="waves-effect btn-large thin btn btn-2" data-intro="Go to the next repo" data-position="left" >Next</button>
+      <button class="waves-effect btn-large thin btn btn-2" data-intro="Go to the next repo" data-position="left" onclick="Materialize.toast('<span class=&quot;grey lighten-4 black-text&quot;> Repo is starred! </span>', 2000)" >Next</button>
     <% end %>
   </div>
 </div>

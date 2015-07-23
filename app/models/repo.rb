@@ -11,7 +11,7 @@ class Repo < ActiveRecord::Base
   			new_repos << repo
   		end
   	end
-  	return new_repos
+  	return new_repos.shuffle
   end
 
   def self.language_repos(user, language)
