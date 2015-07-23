@@ -54,10 +54,11 @@ RepoController.prototype.bindEvents = function(){
 // binding to the top language menu
   $('#lang-nav li').on('click', 'a', function(e){
       e.preventDefault();
-      $('#lang-nav li').removeClass('active')
-      $(e.target).parent('li').addClass('active')
+      $('#lang-nav li').removeClass('active');
+      $(e.target).parent('li').addClass('active');
       var lang = $(this).text().toLowerCase();
-      that.repolist.reloadByLanguage(lang,that)
+      $('#loader').removeClass('hide')
+      that.repolist.reloadByLanguage(lang,that);
   });
 
 // binding to the side language menu
