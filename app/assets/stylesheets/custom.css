@@ -27,6 +27,11 @@
   font-size: .8em;
 }
 
+/*br {
+   display: block;
+   margin: 5px 0;
+}*/
+
 /*Button media queries*/
 .btn {
   color: #fff;
@@ -138,6 +143,10 @@ nav .brand-logo{
 
 .width70{
   width: 70%;
+}
+
+.width68{
+  width: 68%;
 }
 
 .width60{
@@ -295,15 +304,13 @@ nav .brand-logo{
 }
 
 #repo-top-half{
-  /*margin-top: 1%*/
   margin-bottom: 5%;
   height: 160px;
 }
 
 #stats-box-left{
- margin-left: 5%;
+  margin-left: 5%;
   margin-right: 0;
-  margin-top: 1%;
   width: 30%;
   height: 85px;
 }
@@ -331,5 +338,9 @@ nav .brand-logo{
 
 #stats-box-question{
   margin-top: 5px;
+}
+
+#stats-table td, th {
+  padding: 10px 5px;
 }
 
