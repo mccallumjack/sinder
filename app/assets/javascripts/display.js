@@ -16,13 +16,14 @@ $(function(){
 
 function RepoView() {
   this.container = $('#repo-container')
-  this.title = $('#repo-title')
+  this.title = $('#repo-title a')
   this.fullName = $('#repo-full-name')
   this.description = $('#repo-description')
   this.language = $('#repo-language')
   this.stars = $('#repo-stars')
   this.forks = $('#repo-forks')
   this.contributorsCount = $('#contributors-count')
+  this.codeOfConduct = $('#code-of-conduct-icon')
   this.contributorFile = $('#contributors-file')
   this.contributorsPercent = $('#contributors-percent')
   this.pullrequestPercent = $('#pull-request-percent')
