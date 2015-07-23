@@ -22,6 +22,14 @@ describe Repo do
     expect(repo.pull_request_count).to be_kind_of(Integer)
   end
 
+  it "should return true if contributors file exists" do
+    expect(repo.contributors_file).to eq(true)
+  end
+
+  it "should return fals if code of conduct doesn't exist" do
+    expect(repo.code_of_conduct).to eq(false)
+  end
+
   it "should return repos in the correct language" do
     expect(Repo.language_repos(user, 'Ruby').length).to eq(1)
   end
