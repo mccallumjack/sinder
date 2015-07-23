@@ -23,6 +23,10 @@
   font-style: thin;
 }
 
+.smaller-fonts{
+  font-size: .8em;
+}
+
 /*Button media queries*/
 .btn {
   color: #fff;
@@ -173,38 +177,6 @@ nav .brand-logo{
   height: 120px;
 }
 
-#repo-header{
-  margin: 3%;
-  height: 100%
-}
-
-#repo-top-half{
-  /*margin-top: 1%*/
-  margin-bottom: 5%;
-  height: 160px;
-}
-
-#stats-box-left{
-  margin-left: 5%;
-  margin-right: 0;
-  width: 30%;
-}
-
-#stats-box-right{
-  margin-top: 2%;
-  width: 60%;
-}
-
-#github_logo{
-  width: 100px;
-}
-
-#modal-text{
-  display: inline-block;
-  float: right;
-  width: 70%;
-  margin-top: 5%;
-}
 
 .modal-content{
   width: 25%;
@@ -278,6 +250,42 @@ nav .brand-logo{
 }
 
 .toast {
+
   opacity: .5;
   background-color: grey lighten-4;
 }
+
+
+#repo-header{
+  margin: 3%;
+  height: 100%
+}
+
+#repo-top-half{
+  /*margin-top: 1%*/
+  margin-bottom: 5%;
+  height: 160px;
+}
+
+#stats-box-left{
+  margin-left: 5%;
+  margin-right: 0;
+  width: 30%;
+}
+
+#stats-box-right{
+  margin-top: 2%;
+  width: 60%;
+}
+
+#github_logo{
+  width: 100px;
+}
+
+#modal-text{
+  display: inline-block;
+  float: right;
+  width: 70%;
+  margin-top: 5%;
+}
+
