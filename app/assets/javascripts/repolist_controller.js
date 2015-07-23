@@ -11,6 +11,7 @@ RepoController.prototype.load = function() {
 
 RepoController.prototype.renderRepo = function(repo){
   $(this.view.title).html(repo.name)
+  $(this.view.title).attr('href',repo.html_url)
   $(this.view.fullName).html(repo.full_name)
   $(this.view.description).html(repo.description)
   $(this.view.language).html(repo.language)
@@ -29,6 +30,7 @@ RepoController.prototype.loadNext = function(){
   var repo = this.repolist.repos.shift()
   if (repo == null) {
     $('#modal1').openModal();
+    return;
   }
   var nextRepo = this.repolist.repos[0]
   this.renderRepo(repo);
