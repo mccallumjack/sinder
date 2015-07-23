@@ -37,11 +37,11 @@
             <span class="thin smaller-fonts bold300">Pull Request Rate</span>
           </div>
           <div class="display-in-line float-left small-left-margin width20 col s6 m3 tooltipped" data-position="top" data-delay="35" data-tooltip="CONTRIBUTING file in the root directory?">
-            <i id="contributors-file" class="small material-icons"></i><br>
+            <i id="contributors-file" class="small material-icons">thumb_up</i><br>
             <span class="thin smaller-fonts bold300">Contributor Guidelines</span>
           </div>
           <div class="display-in-line float-left small-left-margin width20 col s6 m3 tooltipped" data-position="top" data-delay="35" data-tooltip="CODE_OF_CONDUCT file in the root directory? If not, make this your first contribution!">
-            <i id="code-of-conduct-icon" class="small material-icons"></i><br>
+            <i id="code-of-conduct-icon" class="small material-icons">stars</i><br>
             <span class="thin smaller-fonts bold300">Code of Conduct</span>
           </div>
         </div>
@@ -86,13 +86,13 @@
     <% if session[:access_token] %>
       <div class="display-in-line" data-intro="Hide the repo so you won't see it the next time you go through." data-position="left">
         <form id="hide-form" method="post" action="/hide" data-remote="true">
-          <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is hidden! </span>', 2000, 'rounded')"> Hide </button>
+          <button type="submit" value="Hide" id="hide" class="red darken-3 waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is hidden! </span>', 2000)"> Hide </button>
           <input type="hidden" name="authenticity_token" value="">
         </form>
       </div>
       <div class="display-in-line" data-intro="Star the repo. This will add it to your Github 'Starred Repo' page" data-position="right">
         <form method="post" action="/star" data-remote="true">
-          <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is starred! </span>', 2000, 'rounded')"> Like </button>
+          <button type="submit" value="Like" id="star" class="waves-effect btn-large thin btn btn-2" onclick="Materialize.toast('<span class=&quot;grey lighten-5 toast black-text&quot> Repo is starred! </span>', 2000)"> Like </button>
           <input type="hidden" name="authenticity_token" value="">
         </form>
       </div>
