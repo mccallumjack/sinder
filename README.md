@@ -2,6 +2,9 @@
 [![Build Status](https://travis-ci.org/mccallumjack/sinder.svg?branch=master)](https://travis-ci.org/mccallumjack/sinder)
 
 
+#Schema
+![Schema](/sinder_schema.png)
+
 # sinder
 
 #Team Norms
