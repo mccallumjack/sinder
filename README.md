@@ -3,7 +3,7 @@
 #Sinder
 Sinder is a tool to help programers find open sourced projects on Github that they might be interested in contributing to. Users can flip through projects and, if they have logged on with Github, star any repos that they are interested in contributing to.
 
-Check it out at sinder.herokuapp.com
+Check it out at https://sinder.herokuapp.com
 
 #Schema
 ![Schema](/sinder_schema.png)
