@@ -21,6 +21,6 @@
 
 # Timezone is UTC
 # 10am UTC is 5am EST, 2am PST
-every 1.day, :at => '10:00am' do
+every 3.day, :at => '10:00am' do
   runner 'Repo.update_all'
 end
