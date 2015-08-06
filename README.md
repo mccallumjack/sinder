@@ -4,6 +4,10 @@
 Sinder is a tool to help programers find open sourced projects on Github that they might be interested in contributing to. Users can flip through projects and, if they have logged on with Github, star any repos that they are interested in contributing to.
 
 Check it out at https://sinder.herokuapp.com
+#Sample Screenshots
+![Homepage](/sinder_homepage.png)
+
+![Mainpage](/sinder_display_page.png)
 
 #Schema
 ![Schema](/sinder_schema.png)
@@ -70,3 +74,20 @@ Check it out at https://sinder.herokuapp.com
 ## Heroku Deployment
 
 www.sinder.herokuapp.com
+
+## Our Team!
+![Mainpage](/team_sinder.jpg)
+
+From right to left:
+
+Jack McCallum: [https://github.com/mccallumjack](https://github.com/mccallumjack)
+
+Michael Kunc: [https://github.com/michaelkunc](https://github.com/michaelkunc)
+
+Amber Taniuchi: [https://github.com/amberzilla](https://github.com/amberzilla)
+
+Joe Awad: [https://github.com/joeaawad](https://github.com/joeaawad)
+
+
+
+
