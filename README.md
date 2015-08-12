@@ -76,9 +76,6 @@ Check it out at https://sinder.herokuapp.com
 www.sinder.herokuapp.com
 
 ## Our Team!
-![Mainpage](/team_sinder.jpg)
-
-From right to left:
 
 Jack McCallum: [https://github.com/mccallumjack](https://github.com/mccallumjack)
 
