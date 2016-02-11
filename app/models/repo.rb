@@ -26,7 +26,7 @@ class Repo < ActiveRecord::Base
 
   def get_contributor_count
     doc = Nokogiri::HTML(open(html_url))
-    contributors_count = doc.css('a:contains("contributors") span.num').text.strip.to_i
+    doc.css('a:contains("contributors") span.num').text.strip.to_i
   end
 
   def contributing_file?
@@ -36,7 +36,7 @@ class Repo < ActiveRecord::Base
 
   def open_pull_requests
     doc = Nokogiri::HTML(open(html_url+'/pulls'))
-    pull_requests = doc.css('div.left a.selected').text.gsub(/[^\d]/,'').to_i
+    doc.css('div.left a.selected').text.gsub(/[^\d]/,'').to_i
   end
 
   def self.update_all
